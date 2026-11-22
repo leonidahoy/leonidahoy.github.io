@@ -38,8 +38,43 @@
     }
   ],
   "biggest": 0,
-  "more": [],
-  "rumors": [],
+  "more": [
+    {
+      "tag": "Polémica",
+      "title": "Acusan a Rockstar de copiar una ilustración en una calcomanía del juego",
+      "change": "Según Notebookcheck, jugadores acusan a Rockstar de haber tomado el motivo de una calcomanía de un objeto del juego de la ilustración de una artista, a solo dos días del estreno. Los medios la sitúan en un encargo de ilustración. No hemos visto respuesta de Rockstar.",
+      "plain": "Un diseño del juego se parece mucho a una ilustración ajena y hay debate sobre si se ha respetado a la autora.",
+      "sources": [
+        {
+          "name": "Notebookcheck",
+          "url": "https://notebookcheck.com/GTA-6-Erster-Plagiatsvorwurf-nur-zwei-Tage-nach-der-Veroeffentlichung.1456743.0.html"
+        }
+      ],
+      "detail": "La fuente está en alemán y la acusación es de jugadores, no un fallo judicial. Según el medio, el motivo se vincularía a una ilustración encargada, pero no está claro quién la hizo para Rockstar. No nombramos a nadie ni enlazamos las imágenes.",
+      "why": "Es la primera polémica de derechos de autor sobre el contenido del juego ya publicado."
+    }
+  ],
+  "rumors": [
+    {
+      "title": "Resurge una filtración de 2023: el próximo juego de Rockstar sería L.A. Noire 2",
+      "change": "Game Rant y PC Games recuerdan una filtración de 2023 que sugería que el siguiente juego de Rockstar tras GTA VI sería una secuela de L.A. Noire, hacia 2030. No hay ninguna confirmación de Rockstar.",
+      "plain": "Se habla ya del siguiente juego de Rockstar, pero es una pista antigua y sin confirmar.",
+      "reliability": "baja",
+      "who": "Filtración de 2023 · Game Rant y PC Games",
+      "sources": [
+        {
+          "name": "Game Rant",
+          "url": "https://gamerant.com/gta-6-rockstar-next-game-la-noire-2-leak/"
+        },
+        {
+          "name": "PC Games",
+          "url": "https://www.pcgames.de/LA-Noire-Spiel-11475/News/Rockstar-arbeitet-angeblich-an-Teil-2-nach-GTA-6-1560761/"
+        }
+      ],
+      "detail": "La filtración es de hace tres años y los medios la presentan como especulación. Rockstar no ha dicho nada sobre su siguiente proyecto, y ahora mismo todo su foco está en el lanzamiento de GTA VI y su futuro modo online.",
+      "why": "Muestra que ya se especula con lo que viene después de GTA VI."
+    }
+  ],
   "posts": [
     "Rockstar cifra en 3.790 millones de dólares sus ingresos del primer día de GTA VI y en 32,5 millones las copias vendidas solo en reservas, según VideoCardz y Yahoo Tech. 🏆",
     "Dato curioso: casi 8 millones de personas veían a la vez directos de GTA VI en el pico, según Axios (vía Yahoo Tech). El estreno también fue un fenómeno de streaming. 📺",
@@ -91,8 +126,26 @@
         "why": "It saves you from trying fixes blindly when the problem is a missing update."
       }
     ],
-    "more": [],
-    "rumors": [],
+    "more": [
+      {
+        "tag": "Controversy",
+        "title": "Rockstar accused of copying an illustration on an in-game decal",
+        "change": "According to Notebookcheck, players accuse Rockstar of taking the motif for an in-game object's decal from an artist's illustration, just two days after launch. Outlets tie it to a commissioned illustration. We haven't seen a Rockstar response.",
+        "plain": "One of the game's designs looks a lot like someone else's illustration, and there's debate over whether the author was respected.",
+        "detail": "The source is in German and the accusation comes from players, not a legal ruling. According to the outlet, the motif would be linked to a commissioned illustration, but it's unclear who made it for Rockstar. We don't name anyone or link the images.",
+        "why": "It's the first copyright controversy over the released game's content."
+      }
+    ],
+    "rumors": [
+      {
+        "title": "A 2023 leak resurfaces: Rockstar's next game would be L.A. Noire 2",
+        "change": "Game Rant and PC Games recall a 2023 leak suggesting Rockstar's next game after GTA VI would be an L.A. Noire sequel, around 2030. There's no confirmation from Rockstar.",
+        "plain": "People are already talking about Rockstar's next game, but it's an old, unconfirmed hint.",
+        "detail": "The leak is three years old and outlets present it as speculation. Rockstar hasn't said anything about its next project, and right now all its focus is on GTA VI's launch and its future online mode.",
+        "why": "It shows people are already speculating about what comes after GTA VI.",
+        "who": "2023 leak · Game Rant and PC Games"
+      }
+    ],
     "posts": [
       "Rockstar puts GTA VI's first-day revenue at $3.79 billion and copies sold in preorders alone at 32.5 million, per VideoCardz and Yahoo Tech. 🏆",
       "Fun fact: nearly 8 million people watched GTA VI livestreams at once at the peak, per Axios (via Yahoo Tech). The launch was a streaming phenomenon too. 📺",
