@@ -1,11 +1,35 @@
 {
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "status": {
     "level": "watch",
     "es": "Sin parche del día 1 con notas oficiales. Hubo problemas de conexión a PlayStation Network en el lanzamiento (Sony no ha explicado la causa) y siguen abiertos un bug que cierra el juego en PS5 y cierres que hacen perder progreso.",
     "en": "No day-one patch with official notes. There were PlayStation Network sign-in problems at launch (Sony hasn't explained the cause) and a bug that closes the game on PS5 and crashes that lose progress remain open."
   },
   "entries": [
+    {
+      "id": "ps5-sistema-26-07",
+      "date": "2026-11-22",
+      "type": "update",
+      "state": "notes",
+      "version": "26.07-14.23.00",
+      "platforms": [
+        "ps5"
+      ],
+      "title": {
+        "es": "Actualización obligatoria del sistema de PS5 antes de jugar",
+        "en": "Mandatory PS5 system update before playing"
+      },
+      "text": {
+        "es": "Según Happy Gamer, los jugadores de PS5 necesitaron una actualización obligatoria del software del sistema para que el juego arrancara. Varias guías dicen que es la versión 26.07-14.23.00 y que sus notas solo mencionan arreglos de seguridad. Si no te arranca, actualiza la consola y luego el juego.",
+        "en": "According to Happy Gamer, PS5 players needed a mandatory system software update for the game to start. Several guides say it's version 26.07-14.23.00 and that its notes only mention security fixes. If it won't start, update the console and then the game."
+      },
+      "sources": [
+        {
+          "name": "Happy Gamer",
+          "url": "https://happygamer.com/gta-6-launch-night-psn-ps5-update-sales-176014/"
+        }
+      ]
+    },
     {
       "id": "ps5-cierres-bug",
       "date": "2026-11-21",
@@ -85,6 +109,10 @@
         {
           "name": "Cybernews",
           "url": "https://cybernews.com/tech/playstation-outage-gta-6-release/"
+        },
+        {
+          "name": "TMZ",
+          "url": "https://www.tmz.com/2026/11/18/playstation-experiencing-outages/"
         }
       ]
     },

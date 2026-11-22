@@ -1,0 +1,112 @@
+{
+  "date": "2026-11-22",
+  "title": "Rockstar cifra en 32,5 millones las copias de GTA VI vendidas antes del lanzamiento",
+  "summary": "Rockstar habría dado la cifra de copias: 32,5 millones solo en reservas, junto a los 3.790 millones de ingresos. Además, casi 8 millones de espectadores a la vez y la actualización obligatoria de PS5.",
+  "lead": "El estreno sigue generando cifras récord, y esta vez con número de copias. Si tu PS5 no arranca el juego, recuerda que Sony pidió una actualización obligatoria del sistema.",
+  "stories": [
+    {
+      "tag": "Negocio",
+      "title": "Rockstar cifra en 32,5 millones las copias de GTA VI vendidas antes del lanzamiento",
+      "change": "Según VideoCardz y el directo de Yahoo Tech, Rockstar ha dado dos cifras: 3.790 millones de dólares de ingresos el primer día y 32,5 millones de copias vendidas solo en reservas, un récord. Es la primera cifra de copias que se atribuye a la compañía.",
+      "plain": "Ya hay un número de copias que se atribuye a Rockstar. Antes solo había estimaciones externas.",
+      "sources": [
+        {
+          "name": "VideoCardz",
+          "url": "https://videocardz.com/newz/gta-6-generates-3-79-billion-in-first-day-sales-with-32-5-million-copies-sold-before-launch"
+        },
+        {
+          "name": "Yahoo Tech",
+          "url": "https://tech.yahoo.com/gaming/breaking-news/live/gta-6-release-live-updates-reviews-memes-and-more-as-gamers-explore-and-react-to-leonida-after-13-long-years-230554192.html"
+        }
+      ],
+      "detail": "Ayer, Variety recogía que un portavoz de Take-Two no quiso dar copias, y la cifra de 32,5 millones solo aparecía en un directo. Ahora varios medios la atribuyen a Rockstar. Según Axios, citado por Yahoo Tech, casi 8 millones de personas veían a la vez directos del juego en el pico.",
+      "why": "Pasa de la estimación a una cifra que se atribuye a la compañía."
+    },
+    {
+      "tag": "Aviso",
+      "title": "Sony pidió una actualización obligatoria del sistema de PS5 antes de poder jugar",
+      "change": "Según Happy Gamer, los jugadores de PS5 necesitaron una actualización obligatoria del software del sistema antes de que el juego arrancara. Varias guías la identifican como la versión 26.07-14.23.00 y dicen que sus notas solo mencionan arreglos de seguridad.",
+      "plain": "Si tu PS5 no arranca GTA VI, actualiza primero el sistema y luego el juego.",
+      "sources": [
+        {
+          "name": "Happy Gamer",
+          "url": "https://happygamer.com/gta-6-launch-night-psn-ps5-update-sales-176014/"
+        }
+      ],
+      "detail": "El número de versión viene de guías de jugadores y no de Sony, así que compruébalo en tu consola. La actualización del sistema es independiente de las del juego (01.002.000 y 01.002.001), que siguen sin notas de Rockstar. Lo seguimos en la sección de parches y problemas.",
+      "why": "Evita probar arreglos a ciegas cuando el problema es que falta una actualización."
+    }
+  ],
+  "biggest": 0,
+  "more": [],
+  "rumors": [],
+  "posts": [
+    "Rockstar cifra en 3.790 millones de dólares sus ingresos del primer día de GTA VI y en 32,5 millones las copias vendidas solo en reservas, según VideoCardz y Yahoo Tech. 🏆",
+    "Dato curioso: casi 8 millones de personas veían a la vez directos de GTA VI en el pico, según Axios (vía Yahoo Tech). El estreno también fue un fenómeno de streaming. 📺",
+    "Si tu PS5 no arranca GTA VI: Sony pidió instalar una actualización obligatoria del sistema antes de jugar. Actualiza la consola y luego el juego. 🔄"
+  ],
+  "context": [
+    {
+      "title": "Take-Two: GTA VI facturó 3.790 millones de dólares entre reservas y primer día",
+      "text": "Variety lo recogió el 20 de noviembre; entonces la compañía no daba copias vendidas.",
+      "date": "2026-11-20",
+      "sources": [
+        {
+          "name": "Variety",
+          "url": "https://variety.com/2026/gaming/news/gta-6-sales-billions-first-day-1236954198"
+        }
+      ]
+    },
+    {
+      "title": "GTA Online podría llegar a finales de 2027, según Bloomberg (vía Vice)",
+      "text": "Rockstar no ha anunciado fecha para el modo online ni para la versión de PC.",
+      "date": "2026-11-21",
+      "sources": [
+        {
+          "name": "Vice",
+          "url": "https://vice.com/en/article/gta-6-pc-online-release-date"
+        }
+      ]
+    }
+  ],
+  "en": {
+    "title": "Rockstar puts GTA VI copies sold before launch at 32.5 million",
+    "summary": "Rockstar reportedly gave the missing copies figure: 32.5 million in preorders alone, alongside the $3.79 billion in revenue. Plus nearly 8 million concurrent livestream viewers and the PS5 update.",
+    "lead": "The launch keeps producing record numbers, and this time with a copies figure. If your PS5 won't start the game, remember Sony required a mandatory system update.",
+    "stories": [
+      {
+        "tag": "Business",
+        "title": "Rockstar puts GTA VI copies sold before launch at 32.5 million",
+        "change": "According to VideoCardz and Yahoo Tech's live blog, Rockstar has given two figures: $3.79 billion in first-day revenue and 32.5 million copies sold in preorders alone, a record. It's the first copies figure attributed to the company.",
+        "plain": "There's now a copies number attributed to Rockstar. Before there were only outside estimates.",
+        "detail": "Yesterday, Variety reported a Take-Two spokesperson wouldn't give copies, and the 32.5 million figure only appeared in a live blog. Now several outlets attribute it to Rockstar. According to Axios, cited by Yahoo Tech, nearly 8 million people watched game livestreams at once at the peak.",
+        "why": "It moves from an estimate to a figure attributed to the company."
+      },
+      {
+        "tag": "Heads-up",
+        "title": "Sony required a mandatory PS5 system update before you could play",
+        "change": "According to Happy Gamer, PS5 players needed a mandatory system software update before the game would start. Several guides identify it as version 26.07-14.23.00 and say its notes only mention security fixes.",
+        "plain": "If your PS5 won't start GTA VI, update the system first and then the game.",
+        "detail": "The version number comes from player guides, not Sony, so check it on your console. The system update is separate from the game's updates (01.002.000 and 01.002.001), which still have no notes from Rockstar. We're tracking it in the patches and issues section.",
+        "why": "It saves you from trying fixes blindly when the problem is a missing update."
+      }
+    ],
+    "more": [],
+    "rumors": [],
+    "posts": [
+      "Rockstar puts GTA VI's first-day revenue at $3.79 billion and copies sold in preorders alone at 32.5 million, per VideoCardz and Yahoo Tech. 🏆",
+      "Fun fact: nearly 8 million people watched GTA VI livestreams at once at the peak, per Axios (via Yahoo Tech). The launch was a streaming phenomenon too. 📺",
+      "If your PS5 won't start GTA VI: Sony required a mandatory system update before you could play. Update the console, then the game. 🔄"
+    ],
+    "context": [
+      {
+        "title": "Take-Two: GTA VI made $3.79 billion between preorders and day one",
+        "text": "Variety reported it on November 20; at that point the company wasn't giving copies sold."
+      },
+      {
+        "title": "GTA Online could arrive in late 2027, per Bloomberg (via Vice)",
+        "text": "Rockstar hasn't announced a date for the online mode or the PC version."
+      }
+    ]
+  }
+}

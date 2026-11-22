@@ -1,6 +1,29 @@
 {
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "items": [
+    {
+      "id": "copias-32-5-millones",
+      "date": "2026-11-22",
+      "cat": "record",
+      "title": {
+        "es": "32,5 millones de copias en reservas y casi 8 millones de espectadores a la vez",
+        "en": "32.5 million preordered copies and nearly 8 million concurrent viewers"
+      },
+      "text": {
+        "es": "Según VideoCardz y Yahoo Tech, Rockstar cifra en 32,5 millones las copias vendidas solo en reservas. Según Axios, citado por Yahoo Tech, casi 8 millones de personas veían a la vez directos del juego en el pico.",
+        "en": "According to VideoCardz and Yahoo Tech, Rockstar puts copies sold in preorders alone at 32.5 million. According to Axios, cited by Yahoo Tech, nearly 8 million people watched game livestreams at once at the peak."
+      },
+      "sources": [
+        {
+          "name": "VideoCardz",
+          "url": "https://videocardz.com/newz/gta-6-generates-3-79-billion-in-first-day-sales-with-32-5-million-copies-sold-before-launch"
+        },
+        {
+          "name": "Yahoo Tech",
+          "url": "https://tech.yahoo.com/gaming/breaking-news/live/gta-6-release-live-updates-reviews-memes-and-more-as-gamers-explore-and-react-to-leonida-after-13-long-years-230554192.html"
+        }
+      ]
+    },
     {
       "id": "monte-chiliad",
       "date": "2026-11-21",
