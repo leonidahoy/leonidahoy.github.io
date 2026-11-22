@@ -1,0 +1,330 @@
+{
+  "updated": "2026-11-22",
+  "count": 10,
+  "items": [
+    {
+      "id": "fecha",
+      "link": "release",
+      "q": {
+        "es": "¿Qué día salió GTA VI a la venta?",
+        "en": "What day did GTA VI launch?"
+      },
+      "o": {
+        "es": [
+          "17 de septiembre de 2026",
+          "26 de mayo de 2026",
+          "19 de noviembre de 2026",
+          "5 de diciembre de 2026"
+        ],
+        "en": [
+          "September 17, 2026",
+          "May 26, 2026",
+          "November 19, 2026",
+          "December 5, 2026"
+        ]
+      },
+      "a": 2,
+      "x": {
+        "es": "Salió el 19 de noviembre de 2026, a medianoche hora local en cada país.",
+        "en": "It launched on November 19, 2026, at midnight local time in each country."
+      }
+    },
+    {
+      "id": "plataformas",
+      "link": "guide",
+      "q": {
+        "es": "¿En qué consolas salió GTA VI?",
+        "en": "Which consoles did GTA VI launch on?"
+      },
+      "o": {
+        "es": [
+          "PS5 y Xbox Series X|S",
+          "PS4, PS5 y Xbox One",
+          "Solo PS5",
+          "PS5, Xbox Series y Switch 2"
+        ],
+        "en": [
+          "PS5 and Xbox Series X|S",
+          "PS4, PS5 and Xbox One",
+          "PS5 only",
+          "PS5, Xbox Series and Switch 2"
+        ]
+      },
+      "a": 0,
+      "x": {
+        "es": "Salió en PS5 y Xbox Series X|S. La versión de PC no estaba confirmada en el lanzamiento.",
+        "en": "It launched on PS5 and Xbox Series X|S. A PC version wasn't confirmed at launch."
+      }
+    },
+    {
+      "id": "protagonistas",
+      "link": "leonida",
+      "q": {
+        "es": "¿Cómo se llaman los dos protagonistas?",
+        "en": "What are the two leads called?"
+      },
+      "o": {
+        "es": [
+          "Lucia y Jason",
+          "Lucia y Tommy",
+          "Ana y Carl",
+          "Jason y Niko"
+        ],
+        "en": [
+          "Lucia and Jason",
+          "Lucia and Tommy",
+          "Ana and Carl",
+          "Jason and Niko"
+        ]
+      },
+      "a": 0,
+      "x": {
+        "es": "Lucia Caminos y Jason Duval. Lucia es la primera mujer protagonista jugable de la saga principal.",
+        "en": "Lucia Caminos and Jason Duval. Lucia is the first playable female lead in the main series."
+      }
+    },
+    {
+      "id": "inspiracion",
+      "link": "leonida",
+      "q": {
+        "es": "¿En qué estado real se inspira Leónida?",
+        "en": "Which real US state is Leonida based on?"
+      },
+      "o": {
+        "es": [
+          "California",
+          "Texas",
+          "Florida",
+          "Nueva York"
+        ],
+        "en": [
+          "California",
+          "Texas",
+          "Florida",
+          "New York"
+        ]
+      },
+      "a": 2,
+      "x": {
+        "es": "Leónida es la versión de Florida del universo GTA, con Vice City como gran ciudad inspirada en Miami.",
+        "en": "Leonida is the GTA universe's take on Florida, with Vice City as its Miami-inspired big city."
+      }
+    },
+    {
+      "id": "region",
+      "link": "leonida",
+      "q": {
+        "es": "¿Cuál de estas NO es una zona confirmada de Leónida?",
+        "en": "Which of these is NOT a confirmed Leonida region?"
+      },
+      "o": {
+        "es": [
+          "Leonida Keys",
+          "Grassrivers",
+          "Los Santos",
+          "Port Gellhorn"
+        ],
+        "en": [
+          "Leonida Keys",
+          "Grassrivers",
+          "Los Santos",
+          "Port Gellhorn"
+        ]
+      },
+      "a": 2,
+      "x": {
+        "es": "Los Santos es la ciudad de GTA V. Las zonas de Leónida incluyen Vice City, Leonida Keys, Grassrivers, Port Gellhorn, Ambrosia y Mount Kalaga.",
+        "en": "Los Santos is GTA V's city. Leonida's regions include Vice City, Leonida Keys, Grassrivers, Port Gellhorn, Ambrosia and Mount Kalaga."
+      }
+    },
+    {
+      "id": "bad-bunny",
+      "link": "g:radio",
+      "q": {
+        "es": "¿Qué emisora presenta Bad Bunny?",
+        "en": "Which station does Bad Bunny host?"
+      },
+      "o": {
+        "es": [
+          "Flash FM",
+          "Cocoteo FM",
+          "Back Country Radio",
+          "The Chamber 106.6"
+        ],
+        "en": [
+          "Flash FM",
+          "Cocoteo FM",
+          "Back Country Radio",
+          "The Chamber 106.6"
+        ]
+      },
+      "a": 1,
+      "x": {
+        "es": "Bad Bunny presenta Cocoteo FM, la emisora de música latina, junto a RaiNao.",
+        "en": "Bad Bunny hosts Cocoteo FM, the Latin music station, with RaiNao."
+      }
+    },
+    {
+      "id": "lana",
+      "link": "g:radio",
+      "q": {
+        "es": "¿Qué estilo pone la emisora que presenta Lana Del Rey?",
+        "en": "What style does Lana Del Rey's station play?"
+      },
+      "o": {
+        "es": [
+          "Pop",
+          "Metal",
+          "Country",
+          "Amapiano"
+        ],
+        "en": [
+          "Pop",
+          "Metal",
+          "Country",
+          "Amapiano"
+        ]
+      },
+      "a": 2,
+      "x": {
+        "es": "Lana Del Rey presenta Back Country Radio, de country, junto a Morgan Wallen.",
+        "en": "Lana Del Rey hosts Back Country Radio, a country station, with Morgan Wallen."
+      }
+    },
+    {
+      "id": "truco-dinero",
+      "link": "cheats",
+      "q": {
+        "es": "¿Cuánto dinero da el truco de dinero?",
+        "en": "How much does the money cheat give you?"
+      },
+      "o": {
+        "es": [
+          "50.000 $",
+          "100.000 $",
+          "250.000 $",
+          "1.000.000 $"
+        ],
+        "en": [
+          "$50,000",
+          "$100,000",
+          "$250,000",
+          "$1,000,000"
+        ]
+      },
+      "a": 2,
+      "x": {
+        "es": "Da 250.000 $ y, según varias guías, se desbloquea al terminar la historia principal.",
+        "en": "It gives $250,000 and, according to several guides, unlocks after the main story."
+      }
+    },
+    {
+      "id": "como-trucos",
+      "link": "cheats",
+      "q": {
+        "es": "¿Cómo se introducen los trucos en PS5?",
+        "en": "How do you enter cheats on PS5?"
+      },
+      "o": {
+        "es": [
+          "Escribiéndolos en el chat",
+          "Sacando el móvil, manteniendo L1+R1 y pulsando la cruceta",
+          "Llamando a un número de teléfono",
+          "Pausando el juego y pulsando X"
+        ],
+        "en": [
+          "Typing them in chat",
+          "Taking out the phone, holding L1+R1 and pressing the D-pad",
+          "Calling a phone number",
+          "Pausing and pressing X"
+        ]
+      },
+      "a": 1,
+      "x": {
+        "es": "Se saca el móvil con ↑, se mantienen L1 y R1 (LB y RB en Xbox) y se pulsa la secuencia en la cruceta.",
+        "en": "Take out the phone with ↑, hold L1 and R1 (LB and RB on Xbox) and press the sequence on the D-pad."
+      }
+    },
+    {
+      "id": "duracion",
+      "link": "g:duracion",
+      "q": {
+        "es": "¿Cuánto dura aproximadamente la historia principal, según la prensa?",
+        "en": "Roughly how long is the main story, according to the press?"
+      },
+      "o": {
+        "es": [
+          "Unas 15 horas",
+          "Unas 50 horas",
+          "Unas 120 horas",
+          "Unas 300 horas"
+        ],
+        "en": [
+          "About 15 hours",
+          "About 50 hours",
+          "About 120 hours",
+          "About 300 hours"
+        ]
+      },
+      "a": 1,
+      "x": {
+        "es": "Las estimaciones rondan las 50 horas de historia; cerca de 200 para el 100 %. Rockstar no ha dado cifra oficial.",
+        "en": "Estimates are around 50 hours for the story and close to 200 for 100%. Rockstar hasn't given an official figure."
+      }
+    },
+    {
+      "id": "metacritic",
+      "link": "reviews",
+      "q": {
+        "es": "¿Qué nota sacó GTA VI en Metacritic según Bloomberg?",
+        "en": "What Metacritic score did GTA VI get, according to Bloomberg?"
+      },
+      "o": {
+        "es": [
+          "89",
+          "94",
+          "97",
+          "99"
+        ],
+        "en": [
+          "89",
+          "94",
+          "97",
+          "99"
+        ]
+      },
+      "a": 3,
+      "x": {
+        "es": "Bloomberg informó de un 99 en Metacritic, la nota más alta de la historia para un videojuego.",
+        "en": "Bloomberg reported a 99 on Metacritic, the highest score ever for a video game."
+      }
+    },
+    {
+      "id": "ketchup",
+      "link": "finds",
+      "q": {
+        "es": "¿Qué marca real ha sacado botes del ketchup inventado del juego?",
+        "en": "Which real brand released bottles of the game's made-up ketchup?"
+      },
+      "o": {
+        "es": [
+          "Heinz",
+          "Hellmann's",
+          "Coca-Cola",
+          "Kraft"
+        ],
+        "en": [
+          "Heinz",
+          "Hellmann's",
+          "Coca-Cola",
+          "Kraft"
+        ]
+      },
+      "a": 0,
+      "x": {
+        "es": "Heinz lanzó una tirada limitada de botes inspirados en GORGE, la marca de ketchup ficticia de Leónida.",
+        "en": "Heinz released a limited run of bottles inspired by GORGE, Leonida's fictional ketchup brand."
+      }
+    }
+  ]
+}

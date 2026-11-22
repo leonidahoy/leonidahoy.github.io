@@ -30,6 +30,8 @@ jobs:
         run: node scripts/check-juego.mjs
       - name: Comprobar clips
         run: node scripts/check-clips.mjs
+      - name: Comprobar el test
+        run: node scripts/check-quiz.mjs
       - name: Construir la web
         run: node scripts/build.mjs
         env:

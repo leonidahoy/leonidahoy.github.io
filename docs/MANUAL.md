@@ -106,3 +106,8 @@ Una tarea programada de Claude se ejecuta cada mañana: busca las noticias de GT
 - `node scripts/check-clips.mjs` valida el formato, los enlaces admitidos, los duplicados y el contenido (sin spoilers, filtraciones, trampas online ni contenido +18).
 - La tarea diaria añade **2–4 clips nuevos cada mañana** (instrucciones en `docs/TAREA-DIARIA.md`).
 - En la portada hay una fila deslizable con los 6 últimos clips.
+
+## Funciones para que la gente vuelva y comparta
+- **Novedades en las pestañas.** Si una sección cambió desde la última visita (Noticias, Trucos, Comunidad o Guías), su pestaña muestra un punto rosa, que desaparece al entrar. Se calcula con una «firma» del contenido que genera la web al publicar y se guarda en el propio dispositivo.
+- **Guardados.** Botón de marcador en noticias, rumores, guías, trucos, secretos y clips. Se ven en `/guardados/` (`/en/saved/`; enlace en el pie) y en el buscador cuando no se ha escrito nada. Se guardan solo en el dispositivo: sin cuentas ni datos personales. Esa página no se indexa.
+- **Test «¿Cuánto sabes de GTA 6?»** (`/test-gta-6/`, `/en/gta-6-quiz/`): 10 preguntas al azar de `content/quiz.json`, con las opciones barajadas, explicación y enlace a la página con el dato. Al final muestra la nota, la mejor marca y botones para compartir (X, WhatsApp, Telegram o el menú del móvil). Se valida con `node scripts/check-quiz.mjs`.

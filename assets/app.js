@@ -347,7 +347,7 @@
 
   // Aparición suave al hacer scroll
   if ("IntersectionObserver" in window && !reduced) {
-    var targets = document.querySelectorAll(".story, .mini-story, .post, .col-side .card, .hub__tile, .block__head, .ctx, .faq details, .archive li, .fact-grid li, .legend, .plainbox, .rumor-banner, .day__title");
+    var targets = document.querySelectorAll(".story, .mini-story, .post, .col-side .card, .block__head, .ctx, .faq details, .archive li, .fact-grid li, .legend, .plainbox, .rumor-banner, .day__title");
     var vh = window.innerHeight;
     var io = new IntersectionObserver(function (entries) {
       var n = 0;
@@ -847,6 +847,168 @@
     });
   }
 
+  // ================= Guardados (en el dispositivo) =================
+  var SAVED_KEY = "lh-saved";
+  var getSaved = function () { try { return JSON.parse(store.get(SAVED_KEY) || "[]") || []; } catch (e) { return []; } };
+  var setSaved = function (list) { store.set(SAVED_KEY, JSON.stringify(list.slice(0, 150))); };
+  var isSaved = function (url) { return getSaved().some(function (x) { return x.u === url; }); };
+  function syncSaveBtns() {
+    document.querySelectorAll("[data-save]").forEach(function (b) {
+      var d; try { d = JSON.parse(b.getAttribute("data-save")); } catch (e) { return; }
+      var on = isSaved(d.u);
+      b.setAttribute("aria-pressed", String(on));
+      var lab = b.querySelector("[data-save-label]");
+      if (lab) lab.textContent = lab.getAttribute(on ? "data-on" : "data-off");
+    });
+  }
+  syncSaveBtns();
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest("[data-save]");
+    if (!b) return;
+    e.preventDefault();
+    var d; try { d = JSON.parse(b.getAttribute("data-save")); } catch (err) { return; }
+    var list = getSaved().filter(function (x) { return x.u !== d.u; });
+    var adding = list.length === getSaved().length;
+    if (adding) list.unshift({ u: d.u, t: d.t, k: d.k, at: Date.now() });
+    setSaved(list);
+    buzz();
+    b.classList.remove("is-pop"); void b.offsetWidth; if (adding) b.classList.add("is-pop");
+    syncSaveBtns();
+    toast(adding ? (T.saveAdd || "") : (T.saveRemove || ""), null, null, false);
+  });
+  // Otra pestaña cambió los guardados
+  window.addEventListener("storage", function (e) { if (e.key === SAVED_KEY) { syncSaveBtns(); renderSavedPage(); } });
+  window.addEventListener("pageshow", function (e) { if (e.persisted) syncSaveBtns(); });
+  var savedPage = document.querySelector("[data-saved-page]");
+  function renderSavedPage() {
+    if (!savedPage) return;
+    var list = getSaved(), ul = savedPage.querySelector("[data-saved-list]"), kinds = {};
+    try { kinds = JSON.parse(savedPage.getAttribute("data-kinds")) || {}; } catch (e) {}
+    savedPage.querySelector("[data-saved-empty]").hidden = list.length > 0;
+    savedPage.querySelector("[data-saved-clear]").hidden = list.length === 0;
+    ul.innerHTML = "";
+    list.forEach(function (x) {
+      var li = document.createElement("li");
+      var a = document.createElement("a"); a.href = x.u; a.className = "saved-item";
+      var k = document.createElement("span"); k.className = "saved-item__k search__item--" + x.k; k.textContent = kinds[x.k] || x.k;
+      var t = document.createElement("b"); t.textContent = x.t;
+      a.appendChild(k); a.appendChild(t);
+      var del = document.createElement("button"); del.type = "button"; del.className = "saved-item__x"; del.setAttribute("aria-label", "×"); del.textContent = "×";
+      del.addEventListener("click", function () { setSaved(getSaved().filter(function (y) { return y.u !== x.u; })); renderSavedPage(); syncSaveBtns(); });
+      li.appendChild(a); li.appendChild(del); ul.appendChild(li);
+    });
+  }
+  if (savedPage) {
+    renderSavedPage();
+    savedPage.querySelector("[data-saved-clear]").addEventListener("click", function () {
+      if (window.confirm(savedPage.getAttribute("data-ask") || "?")) { setSaved([]); renderSavedPage(); syncSaveBtns(); }
+    });
+  }
+
+  // ================= Novedades: punto en la pestaña si cambió desde tu última visita =================
+  (function () {
+    var links = document.querySelectorAll("[data-sig]");
+    if (!links.length) return;
+    var seen = {}; try { seen = JSON.parse(store.get("lh-seen") || "{}") || {}; } catch (e) {}
+    var first = !store.get("lh-seen");
+    var changed = false;
+    links.forEach(function (a) {
+      var p = a.getAttribute("data-sig").split(":"), key = p[0], sg = p[1];
+      var here = a.getAttribute("aria-current") === "page";
+      if (first || here || !seen[key]) { if (seen[key] !== sg) { seen[key] = sg; changed = true; } return; }
+      if (seen[key] !== sg) { a.classList.add("has-new"); a.setAttribute("title", T.newDot || ""); }
+    });
+    if (changed || first) store.set("lh-seen", JSON.stringify(seen));
+  })();
+
+  // ================= Test: ¿cuánto sabes de GTA 6? =================
+  (function () {
+    var box = document.querySelector("[data-quiz]"), dataEl = document.getElementById("quiz-data");
+    if (!box || !dataEl) return;
+    var D; try { D = JSON.parse(dataEl.textContent); } catch (e) { return; }
+    var Q = D.t, N = D.n, url = box.getAttribute("data-url");
+    var fmt = function (tpl, o) { return String(tpl).replace(/\{(\w+)\}/g, function (m, k) { return o[k] !== undefined ? o[k] : m; }); };
+    var el = function (tag, cls, txt) { var x = document.createElement(tag); if (cls) x.className = cls; if (txt !== undefined) x.textContent = txt; return x; };
+    var best = +(store.get("lh-quiz-best") || 0);
+    var bestEl = box.querySelector("[data-quiz-best]");
+    if (best && bestEl) { bestEl.textContent = fmt(Q.best, { n: best, t: N }); bestEl.hidden = false; }
+    var qs = [], i = 0, ok = 0;
+    function shuffle(a) { for (var j = a.length - 1; j > 0; j--) { var k = Math.floor(Math.random() * (j + 1)); var t = a[j]; a[j] = a[k]; a[k] = t; } return a; }
+    function start() {
+      qs = shuffle(D.bank.slice()).slice(0, N).map(function (q) {
+        var order = shuffle(q.o.map(function (_, j) { return j; }));
+        return { q: q.q, o: order.map(function (j) { return q.o[j]; }), a: order.indexOf(q.a), x: q.x, l: q.l };
+      });
+      i = 0; ok = 0; show();
+    }
+    function show() {
+      var q = qs[i];
+      box.innerHTML = "";
+      var head = el("div", "quiz__head");
+      head.appendChild(el("span", "quiz__count", fmt(Q.q, { i: i + 1, n: qs.length })));
+      var bar = el("div", "quiz__bar"); var fill = el("span"); fill.style.width = (i / qs.length * 100) + "%"; bar.appendChild(fill); head.appendChild(bar);
+      box.appendChild(head);
+      var h = el("h2", "quiz__q", q.q); h.tabIndex = -1; box.appendChild(h);
+      var opts = el("div", "quiz__opts"); opts.setAttribute("role", "group");
+      q.o.forEach(function (txt, j) {
+        var b = el("button", "quiz__opt"); b.type = "button";
+        b.appendChild(el("span", "quiz__letter", "ABCD".charAt(j))); b.appendChild(el("span", "", txt));
+        b.addEventListener("click", function () { answer(j); });
+        opts.appendChild(b);
+      });
+      box.appendChild(opts);
+      try { h.focus({ preventScroll: true }); } catch (e) {}
+      if (i > 0) box.scrollIntoView({ block: "start", behavior: reduced ? "auto" : "smooth" });
+    }
+    function answer(j) {
+      var q = qs[i], right = j === q.a;
+      if (right) ok++;
+      buzz();
+      var btns = box.querySelectorAll(".quiz__opt");
+      btns.forEach(function (b, k) { b.disabled = true; if (k === q.a) b.classList.add("is-right"); else if (k === j) b.classList.add("is-wrong"); });
+      var fb = el("div", "quiz__fb " + (right ? "is-right" : "is-wrong")); fb.setAttribute("role", "status");
+      fb.appendChild(el("b", "", right ? Q.right : Q.wrong));
+      fb.appendChild(el("p", "", q.x));
+      var more = el("a", "quiz__more", Q.more); more.href = q.l; fb.appendChild(more);
+      var nx = el("button", "btn btn--primary quiz__next", i + 1 < qs.length ? Q.next : Q.finish); nx.type = "button";
+      nx.addEventListener("click", function () { i++; if (i < qs.length) show(); else end(); });
+      fb.appendChild(nx);
+      box.appendChild(fb);
+      try { nx.focus({ preventScroll: true }); } catch (e) {}
+      fb.scrollIntoView({ block: "nearest", behavior: reduced ? "auto" : "smooth" });
+    }
+    function end() {
+      if (ok > best) { best = ok; store.set("lh-quiz-best", String(best)); }
+      var tier = (Q.tiers || []).find(function (t) { return ok >= t[0]; }) || ["", ""];
+      box.innerHTML = "";
+      var res = el("div", "quiz__end");
+      var ring = el("div", "score-ring quiz__ring"); ring.style.setProperty("--p", Math.round(ok / qs.length * 100));
+      ring.appendChild(el("b", "", String(ok))); ring.appendChild(el("small", "", "/" + qs.length));
+      res.appendChild(ring);
+      res.appendChild(el("h2", "", fmt(Q.score, { n: ok, t: qs.length })));
+      res.appendChild(el("p", "quiz__tier", tier[1]));
+      if (best) res.appendChild(el("p", "muted small", fmt(Q.best, { n: best, t: qs.length })));
+      var text = fmt(Q.share, { n: ok, t: qs.length });
+      var row = el("div", "quiz__share");
+      var sh = el("button", "btn btn--primary", Q.shareBtn); sh.type = "button";
+      sh.addEventListener("click", function () {
+        if (navigator.share) navigator.share({ title: document.title, text: text, url: url }).catch(function () {});
+        else window.open("https://x.com/intent/post?text=" + encodeURIComponent(text) + "&url=" + encodeURIComponent(url), "_blank", "noopener");
+      });
+      row.appendChild(sh);
+      [["X", "https://x.com/intent/post?text=" + encodeURIComponent(text) + "&url=" + encodeURIComponent(url)], ["WhatsApp", "https://wa.me/?text=" + encodeURIComponent(text + " " + url)], ["Telegram", "https://t.me/share/url?url=" + encodeURIComponent(url) + "&text=" + encodeURIComponent(text)]].forEach(function (x) {
+        var a = el("a", "btn btn--ghost", x[0]); a.href = x[1]; a.target = "_blank"; a.rel = "noopener"; row.appendChild(a);
+      });
+      res.appendChild(row);
+      var again = el("button", "btn btn--ghost quiz__again", Q.again); again.type = "button"; again.addEventListener("click", start);
+      res.appendChild(again);
+      box.appendChild(res);
+      box.scrollIntoView({ block: "start", behavior: reduced ? "auto" : "smooth" });
+    }
+    var st = box.querySelector("[data-quiz-start]");
+    if (st) st.addEventListener("click", start);
+  })();
+
   // ================= Buscador =================
   (function () {
     var openers = document.querySelectorAll("[data-search-open]");
@@ -885,7 +1047,9 @@
       if (!data) { list.innerHTML = '<p class="search__msg">' + escH(S.loading || "…") + "</p>"; return; }
       if (!terms.length) {
         results = data.items.filter(function (it) { return it.k === "page"; }).slice(0, 7);
-        list.innerHTML = '<p class="search__msg">' + escH(S.try || "") + " " + (S.tryWords || []).map(function (w) { return '<button type="button" class="search__try">' + escH(w) + "</button>"; }).join(" ") + "</p>" + items(results, []);
+        var sv = getSaved().slice(0, 4);
+        var savedHtml = sv.length ? '<p class="search__count">' + escH(S.savedTitle || "") + ' · <a href="' + escH(S.savedUrl || "#") + '">' + escH(S.savedAll || "") + "</a></p>" + items(sv.map(function (x) { return { k: x.k, t: x.t, d: "", u: x.u }; }), []) : "";
+        list.innerHTML = savedHtml + '<p class="search__msg">' + escH(S.try || "") + " " + (S.tryWords || []).map(function (w) { return '<button type="button" class="search__try">' + escH(w) + "</button>"; }).join(" ") + "</p>" + items(results, []);
         return;
       }
       results = data.items.map(function (it) {

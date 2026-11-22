@@ -127,6 +127,14 @@ Son páginas que no caducan y atraen visitas de Google. **No hace falta buscar n
 - Escribe con tus palabras, sin spoilers de la historia (nada de nombres de misiones ni giros) y sin nada del modo online, glitches o mods.
 - No cambies los `slug` (romperían los enlaces). `node scripts/build.mjs` valida que no falte ningún texto en ningún idioma.
 
+## Test de GTA 6 (`content/quiz.json`) — los lunes, si hay datos nuevos
+
+Junto con los trucos de los lunes: si esa semana se ha **confirmado** algo interesante y sin spoilers (un récord, una emisora nueva, un secreto famoso, un parche importante…), añade **1 o 2 preguntas** al final de `items` (no hace falta buscar nada extra: usa lo que ya está publicado en la web):
+`{"id": "slug", "link": "release|guide|leonida|cheats|reviews|finds|clips|patches|guides|news" o "g:<id de guía>", "q": {"es": "…", "en": "…"}, "o": {"es": ["4 opciones"], "en": ["4 opciones"]}, "a": índice de la correcta (0–3), "x": {"es": "explicación breve con el dato", "en": "…"}}`
+- Una sola respuesta correcta, sin trampas ni opciones ambiguas; las incorrectas, verosímiles pero claramente falsas.
+- El dato tiene que estar ya publicado en la web (en la página a la que apunta `link`).
+- Pon `updated` con la fecha de hoy y verifica con `node scripts/check-quiz.mjs` hasta que diga «✓ quiz.json listo».
+
 ## Reglas legales y de AdSense (obligatorias, por encima de todo lo demás)
 
 La web vive de la publicidad de Google AdSense y debe ser 100 % legal. Si una noticia o rumor no puede contarse cumpliendo esto, **no lo publiques**.

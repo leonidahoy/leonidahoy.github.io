@@ -176,6 +176,7 @@ const loadClips = async () => {
   return { updated: raw.updated, items: out };
 };
 const CLIPS = await loadClips();
+const QUIZ = JSON.parse(fs.readFileSync(path.join(ROOT, "content/quiz.json"), "utf8"));
 const GUIAS = JSON.parse(fs.readFileSync(path.join(ROOT, "content/guias.json"), "utf8")).guides;
 for (const g of GUIAS) for (const k of ["slug", "title", "desc", "h1", "lead", "quick"]) for (const c of ["es", "en"]) if (!g[k]?.[c]) throw new Error(`content/guias.json: a la guía «${g.id}» le falta ${k}.${c}`);
 (REVIEWS.reviews || []).forEach((r, i) => {
@@ -254,6 +255,12 @@ const uiIcon = {
   warn: '<svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 2.5 20h19z"/><path d="M12 10v4.5M12 17.4v.01"/></g></svg>',
   spark: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3l2.2 6.3L20.5 12l-6.3 2.2L12 20.5l-2.2-6.3L3.5 12l6.3-2.7z"/></svg>',
 };
+// Botón «Guardar para luego» (se guarda solo en el dispositivo; lo gestiona app.js)
+const bookmarkSvg = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M6.5 3.5h11a1 1 0 0 1 1 1v16l-6.5-4.2-6.5 4.2v-16a1 1 0 0 1 1-1z"/></svg>';
+const saveBtn = (L, { u: url, t, k }, { label = false } = {}) =>
+  `<button type="button" class="save${label ? " save--label" : ""}" data-save='${esc(JSON.stringify({ u: url, t: String(t).slice(0, 140), k }))}' aria-pressed="false" aria-label="${esc(L.t.save.save)}: ${esc(String(t).slice(0, 80))}" title="${esc(L.t.save.save)}">${bookmarkSvg}${label ? `<span data-save-label data-on="${esc(L.t.save.saved)}" data-off="${esc(L.t.save.save)}">${esc(L.t.save.save)}</span>` : ""}</button>`;
+// Firma de cada sección: si cambia desde la última visita, su pestaña muestra un punto de «novedades»
+const sig = (parts) => crypto.createHash("sha1").update(parts.join("|")).digest("hex").slice(0, 10);
 // Iconos propios de la sección de trucos
 const cheatIcon = {
   money: '<svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="12" rx="2.5"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></g></svg>',
@@ -307,7 +314,7 @@ const findCard = (L, f, { compact = false } = {}) => {
   const c = L.code;
   const g = f.link && GUIAS.find((x) => x.id === f.link);
   return `<article class="find find--${f.cat}" data-cat="${esc(f.cat)}" id="${esc(f.id)}">
-    <div class="find__top"><span class="find__ic" aria-hidden="true">${findIcon[f.cat] || findIcon.curiosity}</span><span class="find__cat">${esc(T.cats[f.cat] || f.cat)}</span>${isFresh(f.date, 3) ? `<span class="find__new">${esc(T.isNew)}</span>` : ""}<time datetime="${f.date}">${esc(fmtDate(L, f.date, { day: "numeric", month: "short" }))}</time></div>
+    <div class="find__top"><span class="find__ic" aria-hidden="true">${findIcon[f.cat] || findIcon.curiosity}</span><span class="find__cat">${esc(T.cats[f.cat] || f.cat)}</span>${isFresh(f.date, 3) ? `<span class="find__new">${esc(T.isNew)}</span>` : ""}<time datetime="${f.date}">${esc(fmtDate(L, f.date, { day: "numeric", month: "short" }))}</time>${compact ? "" : saveBtn(L, { u: `${u(L.paths.finds)}#${f.id}`, t: f.title[c] || f.title.es, k: "find" })}</div>
     <h3>${esc(f.title[c] || f.title.es)}</h3>
     ${compact ? "" : `<p>${esc(f.text[c] || f.text.es)}</p>${g ? `<a class="tip__more" href="${u(L.paths.guideItem(g.slug[c]))}">${esc(T.related)}</a>` : ""}${sourcesHtml(L, f.sources)}`}
   </article>`;
@@ -328,7 +335,7 @@ const clipCard = (L, c, { compact = false } = {}) => {
     <div class="clip__meta">
       <p class="clip__by">${c.author ? `${esc(T.by)} ${c.authorUrl ? `<a href="${esc(c.authorUrl)}" target="_blank" rel="noopener nofollow">${esc(c.author)}</a>` : `<b>${esc(c.author)}</b>`} ${esc(T.on(pf))}` : esc(T.on(pf).replace(/^./, (x) => x.toUpperCase()))}</p>
       ${compact ? "" : `<p class="clip__note">${esc(c.note?.[L.code] || c.note?.es || "")}</p>`}
-      <div class="clip__tags"><span>${esc(T.langs[c.lang] || c.lang)}</span>${c.cat ? `<span>${esc(T.cats[c.cat] || c.cat)}</span>` : ""}<time datetime="${c.date}">${esc(fmtDate(L, c.date, { day: "numeric", month: "short" }))}</time><a class="clip__open" href="${esc(c.url)}" target="_blank" rel="noopener nofollow">${esc(T.open(pf))}</a></div>
+      <div class="clip__tags"><span>${esc(T.langs[c.lang] || c.lang)}</span>${c.cat ? `<span>${esc(T.cats[c.cat] || c.cat)}</span>` : ""}<time datetime="${c.date}">${esc(fmtDate(L, c.date, { day: "numeric", month: "short" }))}</time><a class="clip__open" href="${esc(c.url)}" target="_blank" rel="noopener nofollow">${esc(T.open(pf))}</a>${compact ? "" : saveBtn(L, { u: `${u(L.paths.clips)}#clip-${c.id}`, t: c.title, k: "clip" })}</div>
     </div>
   </article>`;
 };
@@ -341,10 +348,11 @@ const stepsHtml = (L, variant) =>
   `<ol class="steps">${L.t.inst[variant].map((t, i) => `<li><span class="steps__n">${i + 1}</span><span class="steps__ic">${tabIcon[stepIcons[variant][i]]}</span><span class="steps__t">${t}</span></li>`).join("")}</ol>`;
 const TAB_ORDER = ["home", "news", "cheats", "community", "guide"];
 // Las páginas de rumores cuentan como «Noticias» (es la misma pestaña, con un selector Confirmadas | Rumores)
+const SECTION_SIG = {};
 const tabKey = (active) => (active === "rumors" ? "news" : active === "finds" || active === "clips" ? "community" : active);
 const tabbar = (L, active) => `
 <nav class="tabbar" aria-label="${esc(L.t.tabsLabel)}">
-  ${TAB_ORDER.map((k, i) => `<a href="${u(k === "guide" ? L.paths.guides : k === "community" ? L.paths.clips : L.paths[k])}" data-tab="${i}"${k === tabKey(active) ? ' aria-current="page"' : ""}>${tabIcon[k]}<span>${esc(L.t.tabs[k])}</span></a>`).join("")}
+  ${TAB_ORDER.map((k, i) => `<a href="${u(k === "guide" ? L.paths.guides : k === "community" ? L.paths.clips : L.paths[k])}" data-tab="${i}"${SECTION_SIG[L.code]?.[k] ? ` data-sig="${k}:${SECTION_SIG[L.code][k]}"` : ""}${k === tabKey(active) ? ' aria-current="page"' : ""}>${tabIcon[k]}<span>${esc(L.t.tabs[k])}</span></a>`).join("")}
 </nav>`;
 const installSheet = (L) => `
 <div class="sheet" data-install-sheet hidden>
@@ -426,7 +434,7 @@ const header = (L, active, alts) => {
         <span class="brand__text"><span class="brand__name">LEÓNIDA<em>Hoy</em></span><span class="brand__tag">${esc(L.t.tagline)}</span></span>
       </a>
       <nav class="nav" aria-label="${esc(L.t.mainNav)}">
-        ${nav.map(([href, label, key]) => `<a href="${u(href)}"${key === tabKey(active) ? ' aria-current="page"' : ""}>${esc(label)}</a>`).join("")}
+        ${nav.map(([href, label, key]) => `<a href="${u(href)}"${key === tabKey(active) ? ' aria-current="page"' : ""}${SECTION_SIG[L.code]?.[key] ? ` data-sig="${key}:${SECTION_SIG[L.code][key]}"` : ""}>${esc(label)}</a>`).join("")}
       </nav>
       ${langSwitch(L, alts)}
       <div class="pill-count" data-countdown-mini="${esc(cfg.launchDate)}" data-done="${esc(L.t.miniDone)}" aria-hidden="true"><span class="dot"></span><span class="pill-pre" data-mini-pre>${esc(L.t.miniPre)}</span><span data-mini>19/11</span></div>
@@ -472,6 +480,7 @@ const footer = (L) => {
         </div>
         <div><h2>${esc(L.t.ux.foot.community)}</h2>
           <a href="${u(P.clips)}">${esc(L.t.clips.tile)}</a>
+          <a href="${u(P.quiz)}">${esc(L.t.quiz.tile)}</a>
           <a href="${u(P.finds)}">${esc(L.t.tabs.finds)}</a>
         </div>
         <div><h2>${esc(L.t.ux.foot.play)}</h2>
@@ -482,6 +491,7 @@ const footer = (L) => {
         </div>
         <div><h2>${esc(L.t.ux.foot.site)}</h2>
           <a href="${u(P.app)}">${I(uiIcon.install)} App</a>
+          <a href="${u(P.saved)}">${I(bookmarkSvg)} ${esc(L.t.save.title)}</a>
           <a href="${u(P.about)}">${esc(L.t.footerLinks.about)}</a>
           <a href="${u(P.privacy)}">${esc(L.t.footerLinks.privacy)}</a>
           <a href="${u(P.legal)}">${esc(L.t.footerLinks.legal)}</a>
@@ -569,7 +579,7 @@ ${GA ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${esc(GA)
 ${CF ? `<script>(function(){function go(){var s=document.createElement("script");s.defer=true;s.src="https://static.cloudflareinsights.com/beacon.min.js";s.setAttribute("data-cf-beacon",'{"token":"${esc(CF)}"}');document.head.appendChild(s)}if(document.prerendering)document.addEventListener("prerenderingchange",go,{once:true});else go()})()</script>` : ""}
 ${jsonLd.map((j) => `<script type="application/ld+json">${JSON.stringify(j).replace(/</g, "\\u003c")}</script>`).join("\n")}
 </head>
-<body data-base="${BASE}" data-search="${u(`/search-${L.code}.json`)}"${ROOT_KEYS.has(key) ? " data-root" : ""} data-app='${esc(JSON.stringify({ ...L.t.app, swipe: L.t.inst.swipe, search: { label: L.t.ux.search.label, ph: L.t.ux.search.ph, close: L.t.ux.search.close, loading: L.t.ux.search.loading, try: L.t.ux.search.try, tryWords: L.t.ux.search.tryWords, none: L.t.ux.search.none("{q}"), one: L.t.ux.search.results(1), many: L.t.ux.search.results(7).replace("7", "{n}") } }))}'>
+<body data-base="${BASE}" data-search="${u(`/search-${L.code}.json`)}"${ROOT_KEYS.has(key) ? " data-root" : ""} data-app='${esc(JSON.stringify({ ...L.t.app, swipe: L.t.inst.swipe, saveAdd: L.t.save.add, saveRemove: L.t.save.remove, newDot: L.t.newDot, search: { savedTitle: L.t.save.title, savedAll: L.t.save.seeAll, savedUrl: u(L.paths.saved), savedKinds: L.t.save.kinds, label: L.t.ux.search.label, ph: L.t.ux.search.ph, close: L.t.ux.search.close, loading: L.t.ux.search.loading, try: L.t.ux.search.try, tryWords: L.t.ux.search.tryWords, none: L.t.ux.search.none("{q}"), one: L.t.ux.search.results(1), many: L.t.ux.search.results(7).replace("7", "{n}") } }))}'>
 <a class="skip" href="#main">${esc(L.t.skip)}</a>
 ${header(L, active, alts)}
 ${langHint(L, alts)}
@@ -752,6 +762,7 @@ const briefBody = (L, b) => {
       ${tile("rumors", P.rumors, tabIcon.rumors, L.t.nav.rumors, L.t.hubRumorsSub(rumors.length))}
       ${tile("patches", P.patches, findIcon.update, L.t.patch.tile, L.t.patch.level[PATCHES.status.level] || L.t.patch.tileSub)}
     </nav>
+    <a class="quiz-cta" href="${u(P.quiz)}"><span class="quiz-cta__ic" aria-hidden="true">${uiIcon.spark}</span><span class="quiz-cta__txt"><b>${esc(L.t.quiz.h1)}</b><small>${esc(L.t.quiz.tileSub)}</small></span><span class="quiz-cta__go">${esc(L.t.quiz.cta)} →</span></a>
     ${adUnit(L, "top")}
   </div>
   ${
@@ -919,7 +930,7 @@ const itemBody = (L, it) => {
     <nav class="crumbs" aria-label="${esc(L.t.crumbs)}"><a href="${u(P.home)}">${esc(L.t.nav.home)}</a><span aria-hidden="true">›</span><a href="${u(listPath)}">${esc(rumor ? L.t.nav.rumors : L.t.nav.news)}</a></nav>
     <div class="story__meta">${metaTags(L, it)}</div>
     <h1 class="article__title">${esc(it.title)}</h1>
-    <p class="muted small"><time datetime="${it.date}">${esc(fmtDate(L, it.date))}</time></p>
+    <div class="article__tools"><p class="muted small"><time datetime="${it.date}">${esc(fmtDate(L, it.date))}</time></p>${saveBtn(L, { u: u(it.path), t: it.title, k: rumor ? "rumor" : "news" }, { label: true })}</div>
   </div></section>
   <div class="wrap layout">
     <div class="col-main">
@@ -980,6 +991,16 @@ fs.mkdirSync(OUT, { recursive: true });
 fs.cpSync(path.join(ROOT, "assets"), path.join(OUT, "assets"), { recursive: true });
 
 const sitemap = []; // [clave, ruta, lastmod, changefreq, priority]
+
+// Firmas de contenido por sección (para el punto de «novedades» en las pestañas)
+for (const code of ACTIVE) {
+  SECTION_SIG[code] = {
+    news: sig(DATA[code].items.slice(0, 80).map((i) => i.key)),
+    cheats: sig(TRUCOS.cheats.map((c) => `${c.id}:${c.status}`)),
+    community: sig([...CLIPS.items.map((c) => c.id), ...FINDS.items.map((f) => f.id)]),
+    guide: sig([...GUIAS.map((g) => `${g.id}:${g.updated}`), ...PATCHES.entries.map((e) => `${e.id}:${e.state}`), QUIZ.updated]),
+  };
+}
 
 for (const code of ACTIVE) {
   const L = LOCALES[code];
@@ -1197,6 +1218,7 @@ for (const code of ACTIVE) {
         <div class="cheat__head">
           <span class="cheat__ic" aria-hidden="true">${cheatIcon[c.cat] || cheatIcon.world}</span>
           <div class="cheat__ttl"><span class="cheat__cat">${esc(T.cats[c.cat] || "")}${isFresh(c.added) && c.seq ? ` <span class="cheat__new">${esc(T.isNew)}</span>` : ""}</span><h3>${esc(c.name[code] || c.name.es)}</h3></div>
+          ${saveBtn(L, { u: `${u(P.cheats)}#${c.id}`, t: `${L.t.cheats.tile}: ${c.name[code] || c.name.es}`, k: "cheat" })}
         </div>
         <p class="cheat__fx">${esc(c.effect[code] || c.effect.es)}</p>
         ${
@@ -1416,7 +1438,7 @@ for (const code of ACTIVE) {
             crumbsLd([[L.t.crumbHome, P.home], [G.indexH1, P.guides], [g.h1[code], href]]),
           ],
           body: `
-  <section class="page-head page-head--guide"><div class="wrap"><p class="eyebrow">${esc(G.indexEyebrow)}</p><h1>${esc(g.h1[code])}</h1><p class="lead-text">${esc(g.lead[code])}</p></div></section>
+  <section class="page-head page-head--guide"><div class="wrap"><p class="eyebrow">${esc(G.indexEyebrow)}</p><h1>${esc(g.h1[code])}</h1><p class="lead-text">${esc(g.lead[code])}</p>${saveBtn(L, { u: u(href), t: g.h1[code], k: "guide" }, { label: true })}</div></section>
   <div class="wrap layout">
     <div class="col-main">
       <div class="quick"><span class="quick__ic" aria-hidden="true">${gIcon[g.icon] || gIcon.tips}</span><div><b>${esc(G.quick)}</b><p>${esc(g.quick[code])}</p></div></div>
@@ -1442,6 +1464,7 @@ for (const code of ACTIVE) {
         { href: P.cheats, ic: gIcon.cheat, t: L.t.cheats.h1, d: L.t.cheats.tileSub(TRUCOS.cheats.filter((c) => c.seq).length) },
         { href: P.finds, ic: findIcon.easter, t: L.t.finds.h1, d: L.t.finds.tileSub(FINDS.items.length) },
         { href: P.clips, ic: tabIcon.community, t: L.t.clips.h1, d: L.t.clips.tileSub(CLIPS.items.length) },
+        { href: P.quiz, ic: uiIcon.spark, t: L.t.quiz.tile, d: L.t.quiz.tileSub },
         gItem(gi("consejos")), gItem(gi("dinero")), gItem(gi("duracion")), gItem(gi("radio")),
         ...GUIAS.filter((x) => !["consejos", "dinero", "duracion", "radio"].includes(x.id)).map(gItem),
       ]],
@@ -1499,11 +1522,66 @@ for (const code of ACTIVE) {
     for (const g of GUIAS) add("guide", g.h1[code], `${g.quick[code]}`, P.guideItem(g.slug[code]), g.updated, `${g.desc[code]} ${(g.faq?.[code] || []).map(([q]) => q).join(" ")}`);
     for (const c of TRUCOS.cheats) add("cheat", c.name[code] || c.name.es, `${c.effect[code] || c.effect.es}${c.unlock ? " " + (c.unlock[code] || c.unlock.es) : ""}`, `${P.cheats}#${c.id}`, c.added, `${L.t.cheats.cats[c.cat] || ""} ${L.t.cheats.tile}`);
     add("page", L.t.clips.h1, L.t.clips.desc, P.clips, null, "videos youtube tiktok shorts");
+    add("page", L.t.quiz.h1, L.t.quiz.desc, P.quiz, null, "test quiz trivial preguntas");
     for (const c of CLIPS.items) add("clip", c.title, `${c.author} · ${PLATFORM[c.platform]} · ${c.note?.[code] || c.note?.es || ""}`, `${P.clips}#clip-${c.id}`, c.date, L.t.clips.cats[c.cat] || "");
     for (const f of FINDS.items) add("find", f.title[code] || f.title.es, f.text[code] || f.text.es, `${P.finds}#${f.id}`, f.date, L.t.finds.cats[f.cat] || "");
     for (const e of PATCHES.entries) add("patch", e.title[code] || e.title.es, e.text[code] || e.text.es, `${P.patches}#${e.id}`, e.date);
     for (const it of DATA[code].items.slice(0, 600)) add(it.kind === "rumor" ? "rumor" : "news", it.title, it.plain || it.change, it.path, it.date);
     write(`/search-${code}.json`, JSON.stringify({ kinds: S, items: idx }));
+  }
+
+  // Guardados (solo en el dispositivo; no se indexa)
+  write(
+    P.saved,
+    layout(L, {
+      title: L.t.save.pageTitle,
+      description: L.t.save.pageDesc,
+      key: "saved",
+      active: "",
+      noindex: true,
+      body: `
+  <section class="page-head page-head--saved"><div class="wrap"><p class="eyebrow">${esc(L.t.save.title)}</p><h1>${esc(L.t.save.pageTitle)}</h1><p class="lead-text">${esc(L.t.save.lead)}</p></div></section>
+  <div class="wrap saved-page" data-saved-page data-kinds='${esc(JSON.stringify(L.t.save.kinds))}' data-ask="${esc(L.t.save.clearAsk)}">
+    <ul class="saved-list" data-saved-list></ul>
+    <div class="empty-state" data-saved-empty hidden><span aria-hidden="true">${bookmarkSvg}</span><p>${esc(L.t.save.empty)}</p><a class="btn btn--primary" href="${u(P.guides)}">${esc(L.t.ux.allGuides)}</a></div>
+    <button type="button" class="btn btn--ghost saved-clear" data-saved-clear hidden>${esc(L.t.save.clear)}</button>
+  </div>`,
+    })
+  );
+
+  // Test: ¿cuánto sabes de GTA 6?
+  {
+    const T = L.t.quiz;
+    const linkOf = (k) => (k.startsWith("g:") ? (GUIAS.find((g) => g.id === k.slice(2)) ? P.guideItem(GUIAS.find((g) => g.id === k.slice(2)).slug[code]) : P.guides) : P[k] || P.guides);
+    const bank = QUIZ.items.map((q) => ({ id: q.id, q: q.q[code], o: q.o[code], a: q.a, x: q.x[code], l: u(linkOf(q.link)) }));
+    const data = { n: Math.min(QUIZ.count || 10, bank.length), bank, t: { q: T.q(1, 9).replace("1", "{i}").replace("9", "{n}"), right: T.right, wrong: T.wrong, more: T.more, next: T.next, finish: T.finish, score: T.score(1, 9).replace("1", "{n}").replace("9", "{t}"), best: T.best(1, 9).replace("1", "{n}").replace("9", "{t}"), tiers: T.tiers, again: T.again, share: T.share(1, 9).replace("1", "{n}").replace("9", "{t}"), shareBtn: T.shareBtn } };
+    write(
+      P.quiz,
+      layout(L, {
+        title: T.title,
+        description: T.desc,
+        key: "quiz",
+        active: "guide",
+        jsonLd: [
+          { "@context": "https://schema.org", "@type": "Quiz", inLanguage: code, name: T.h1, about: "Grand Theft Auto VI", educationalLevel: "beginner", hasPart: bank.slice(0, 10).map((b) => ({ "@type": "Question", name: b.q, acceptedAnswer: { "@type": "Answer", text: b.o[b.a] } })) },
+          crumbsLd([[L.t.crumbHome, P.home], [L.t.gd.indexH1, P.guides], [T.h1, P.quiz]]),
+        ],
+        body: `
+  <section class="page-head page-head--quiz"><div class="wrap"><p class="eyebrow">${esc(T.eyebrow)}</p><h1>${esc(T.h1)}</h1><p class="lead-text">${esc(T.lead)}</p></div></section>
+  <div class="wrap layout">
+    <div class="col-main">
+      <div class="quiz" data-quiz data-url="${abs(P.quiz)}">
+        <div class="quiz__intro"><span class="quiz__badge" aria-hidden="true">${uiIcon.spark}</span><p class="quiz__best" data-quiz-best hidden></p><button type="button" class="btn btn--primary btn--big" data-quiz-start>${esc(T.start)}</button></div>
+      </div>
+      <script type="application/json" id="quiz-data">${JSON.stringify(data).replace(/</g, "\\u003c")}</script>
+      <noscript><p>${esc(T.noscript)}</p><ol>${bank.map((b) => `<li>${esc(b.q)} <b>${esc(b.o[b.a])}</b></li>`).join("")}</ol></noscript>
+      ${adUnit(L, "bottom")}
+    </div>
+    <aside class="col-side">${sideCards(L)}</aside>
+  </div>`,
+      })
+    );
+    sitemap.push(["quiz", P.quiz, QUIZ.updated, "weekly", "0.8"]);
   }
 
   // App: cómo instalar en cada dispositivo (y qué se puede hacer)
