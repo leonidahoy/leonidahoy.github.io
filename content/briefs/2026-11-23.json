@@ -1,8 +1,8 @@
 {
   "date": "2026-11-23",
-  "title": "Trucos de GTA VI: 61 en total, se desbloquean con retos y solo se conocen 21 códigos",
-  "summary": "Los 61 trucos del juego no son libres: se desbloquean con retos y aún no se conocen todos los códigos. También, una ficha de GTA 6 en Steam que no es la versión de PC.",
-  "lead": "Con el juego ya en manos de millones de jugadores, la duda de la semana son los trucos: cuáles hay, cómo se desbloquean y qué se desactiva al usarlos. Ojo también con las supuestas versiones de PC, porque Rockstar no ha anunciado ninguna.",
+  "title": "GTA VI recibe su primer parche con notas: arregla cierres, autoguardado y llamadas",
+  "summary": "Rockstar publica el primer parche posterior al lanzamiento, con notas oficiales y despliegue por oleadas en PS5. Cyberleek dice haber soltado el archivo que faltaba de su build de Xbox.",
+  "lead": "Tras cuatro días con problemas sin arreglo oficial, llega la primera actualización con notas. Si te cerraba el juego o no guardaba bien, esta es la que importa.",
   "stories": [
     {
       "tag": "Jugabilidad",
@@ -42,8 +42,51 @@
     }
   ],
   "biggest": 0,
-  "more": [],
-  "rumors": [],
+  "more": [
+    {
+      "tag": "Actualización",
+      "title": "Rockstar publica la primera actualización con notas: arregla cierres, autoguardado y llamadas",
+      "change": "Rockstar ha lanzado el 23 de noviembre la actualización 01.002.002 (PS5) y 1.0.2.2 (Xbox), con notas oficiales. Arregla varias causas de cierres, el clima que se quedaba fijo, un problema de autoguardado y llamadas que no se activaban, incluidas las necesarias para avanzar. Pesa unos 603,8 MB en PS5 y 1,6 GB en Xbox.",
+      "plain": "Instala la actualización cuando te llegue: corrige cierres y el autoguardado. En PS5 se reparte por oleadas, así que puede tardar unas horas en aparecer.",
+      "sources": [
+        {
+          "name": "Vice",
+          "url": "https://www.vice.com/en/article/gta-6-update-01-002-002-patch-notes/"
+        },
+        {
+          "name": "PC Guide",
+          "url": "https://www.pcguide.com/news/gta-6-gets-its-first-update-for-ps5-and-xbox-series-xs-to-fix-game-crashes-weather-bugs-and-more/"
+        },
+        {
+          "name": "Destructoid",
+          "url": "https://www.destructoid.com/gta-6-patch-notes-nov-23-launch/"
+        }
+      ],
+      "detail": "Sin spoilers. Las notas también mencionan no poder perder el nivel de búsqueda, una barra del gimnasio rota y compañeros que no entregaban bolsas a los intermediarios. Un medio apunta que las notas no aclaran si una llamada pendiente llegará sola al cargar una partida afectada. Rockstar la despliega por oleadas en PS5.",
+      "why": "Es la primera respuesta oficial de Rockstar a los problemas del lanzamiento."
+    }
+  ],
+  "rumors": [
+    {
+      "title": "Cyberleek dice haber soltado el archivo que faltaba de su build de Xbox",
+      "change": "Según TechRadar y VGTimes, el grupo Cyberleek asegura haber publicado hoy el ejecutable que faltaba de su supuesta build de Xbox. Los medios no coinciden en si ya está disponible, y nadie independiente ha confirmado que sea auténtica. Rockstar no ha comentado.",
+      "plain": "Otra vez se habla de una filtración, pero no está verificada y es material robado. No lo busques.",
+      "reliability": "baja",
+      "who": "Cyberleek · TechRadar y VGTimes",
+      "sources": [
+        {
+          "name": "TechRadar",
+          "url": "https://www.techradar.com/gaming/final-piece-of-claimed-gta-6-leak-set-to-arrive-today-and-theres-hope-it-could-mean-rockstar-launches-the-pc-port-sooner"
+        },
+        {
+          "name": "VGTimes",
+          "url": "https://vgtimes.com/gaming-news/175497-hacker-leaks-missing-gta-6-file-could-enthusiasts-now-try-running-it-on-pc.html"
+        }
+      ],
+      "detail": "Algunos medios recuerdan que ya han circulado falsificaciones con malware que usan el nombre de GTA 6 y del propio grupo. No enlazamos ni recomendamos buscar este material: es contenido robado, el grupo pide dinero en criptomonedas y puede ser peligroso.",
+      "why": "Sirve de aviso: cualquier archivo que prometa «GTA 6 gratis o para PC» es un riesgo."
+    }
+  ],
   "posts": [
     "GTA VI tiene 61 trucos, pero se desbloquean con retos y solo se conocen unos 21 códigos, según Yahoo Noticias. Ojo: con un truco activo se desactivan trofeos, logros y guardado, según JuegosADN. 🎮",
     "Ha aparecido una ficha de GTA 6 en Steam, pero no es la versión de PC que esperan los fans, según Mezha. Rockstar no ha anunciado PC. Desconfía de ofertas de «GTA 6 para PC». 🛑",
@@ -74,9 +117,9 @@
     }
   ],
   "en": {
-    "title": "GTA VI cheats: 61 in total, unlocked by challenges, and only 21 codes are known",
-    "summary": "The game's 61 cheats aren't free: they unlock through challenges and not all codes are known yet. Also, a GTA 6 listing on Steam that isn't the PC version.",
-    "lead": "With the game in millions of players' hands, this week's question is cheats: which exist, how they unlock and what gets disabled when you use them. Watch out for supposed PC versions too, because Rockstar hasn't announced any.",
+    "title": "GTA VI gets its first patch with notes: fixes crashes, autosave and phone calls",
+    "summary": "Rockstar releases its first post-launch patch, with official notes and a staged rollout on PS5. Cyberleek says it has dropped the missing file of its Xbox build.",
+    "lead": "After four days of problems with no official fix, the first update with notes arrives. If the game was closing on you or not saving properly, this is the one that matters.",
     "stories": [
       {
         "tag": "Gameplay",
@@ -95,8 +138,26 @@
         "why": "It keeps you from buying something that isn't what it seems."
       }
     ],
-    "more": [],
-    "rumors": [],
+    "more": [
+      {
+        "tag": "Update",
+        "title": "Rockstar releases the first update with notes: fixes crashes, autosave and phone calls",
+        "change": "Rockstar released update 01.002.002 (PS5) and 1.0.2.2 (Xbox) on November 23, with official notes. It fixes several causes of crashes, weather getting stuck, an autosave issue and phone calls that failed to trigger, including ones needed to progress. It weighs about 603.8 MB on PS5 and 1.6 GB on Xbox.",
+        "plain": "Install the update when it reaches you: it fixes crashes and autosave. On PS5 it rolls out in waves, so it may take a few hours to appear.",
+        "detail": "No spoilers. The notes also mention being unable to lose a wanted level, a broken gym bar and partners not handing bags to fences. One outlet notes the notes don't clarify whether a pending call will arrive by itself when loading an affected save. Rockstar is rolling it out in waves on PS5.",
+        "why": "It's Rockstar's first official response to the launch problems."
+      }
+    ],
+    "rumors": [
+      {
+        "title": "Cyberleek says it dropped the missing file of its Xbox build",
+        "change": "According to TechRadar and VGTimes, the group Cyberleek claims to have published today the executable missing from its alleged Xbox build. Outlets disagree on whether it's actually available, and no independent party has confirmed it's genuine. Rockstar hasn't commented.",
+        "plain": "Another leak is in the news, but it's unverified and it's stolen material. Don't look for it.",
+        "detail": "Some outlets recall that fakes carrying malware have already circulated using GTA 6's name and the group's. We don't link or recommend looking for this material: it's stolen content, the group asks for money in cryptocurrency and it can be dangerous.",
+        "why": "It serves as a warning: any file promising \"GTA 6 for free or for PC\" is a risk.",
+        "who": "Cyberleek · TechRadar and VGTimes"
+      }
+    ],
     "posts": [
       "GTA VI has 61 cheats, but they unlock through challenges and only about 21 codes are known, per Yahoo Noticias. Note: with a cheat active, trophies, achievements and autosave are disabled, per JuegosADN. 🎮",
       "A GTA 6 listing has appeared on Steam, but it isn't the PC version fans are waiting for, per Mezha. Rockstar hasn't announced PC. Be wary of \"GTA 6 for PC\" offers. 🛑",
