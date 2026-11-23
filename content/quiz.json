@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "count": 10,
   "items": [
     {
@@ -324,6 +324,60 @@
       "x": {
         "es": "Heinz lanzó una tirada limitada de botes inspirados en GORGE, la marca de ketchup ficticia de Leónida.",
         "en": "Heinz released a limited run of bottles inspired by GORGE, Leonida's fictional ketchup brand."
+      }
+    },
+    {
+      "id": "copias-reservas",
+      "link": "news",
+      "q": {
+        "es": "¿Cuántas copias de GTA VI dice Rockstar que se vendieron solo en reservas?",
+        "en": "How many GTA VI copies does Rockstar say were sold in preorders alone?"
+      },
+      "o": {
+        "es": [
+          "8 millones",
+          "19 millones",
+          "32,5 millones",
+          "50 millones"
+        ],
+        "en": [
+          "8 million",
+          "19 million",
+          "32.5 million",
+          "50 million"
+        ]
+      },
+      "a": 2,
+      "x": {
+        "es": "VideoCardz y Yahoo Tech recogen que Rockstar cifra en 32,5 millones las copias vendidas solo en reservas, junto a 3.790 millones de dólares de ingresos el primer día.",
+        "en": "VideoCardz and Yahoo Tech report that Rockstar puts copies sold in preorders alone at 32.5 million, alongside $3.79 billion in first-day revenue."
+      }
+    },
+    {
+      "id": "cuantos-trucos",
+      "link": "cheats",
+      "q": {
+        "es": "¿Cuántos trucos tiene GTA VI según las guías?",
+        "en": "How many cheats does GTA VI have, according to guides?"
+      },
+      "o": {
+        "es": [
+          "12",
+          "35",
+          "61",
+          "100"
+        ],
+        "en": [
+          "12",
+          "35",
+          "61",
+          "100"
+        ]
+      },
+      "a": 2,
+      "x": {
+        "es": "Según Yahoo Noticias hay 61 trucos, que se desbloquean con retos del juego. Solo se conocen unos 21 códigos y, mientras un truco está activo, se desactivan trofeos y guardado automático.",
+        "en": "According to Yahoo Noticias there are 61 cheats, unlocked through in-game challenges. Only about 21 codes are known and, while a cheat is active, trophies and autosave are disabled."
       }
     }
   ]

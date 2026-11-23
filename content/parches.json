@@ -1,9 +1,9 @@
 {
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "status": {
     "level": "watch",
-    "es": "Sin parche del día 1 con notas oficiales. Hubo problemas de conexión a PlayStation Network en el lanzamiento (Sony no ha explicado la causa) y siguen abiertos un bug que cierra el juego en PS5 y cierres que hacen perder progreso.",
-    "en": "No day-one patch with official notes. There were PlayStation Network sign-in problems at launch (Sony hasn't explained the cause) and a bug that closes the game on PS5 and crashes that lose progress remain open."
+    "es": "Sin parche del día 1 con notas oficiales. Los problemas de conexión a PlayStation Network del lanzamiento ya se han resuelto, aunque siguen abiertos un bug que cierra el juego en PS5 y cierres que hacen perder progreso.",
+    "en": "No day-one patch with official notes. The launch PlayStation Network sign-in problems have been resolved, although a bug that closes the game on PS5 and crashes that lose progress remain open."
   },
   "entries": [
     {
@@ -27,6 +27,10 @@
         {
           "name": "Happy Gamer",
           "url": "https://happygamer.com/gta-6-launch-night-psn-ps5-update-sales-176014/"
+        },
+        {
+          "name": "Tech Times",
+          "url": "https://www.techtimes.com/articles/331059/20261119/sony-requires-ps5-update-gta-6-even-after-pre-loading-patch-notes-cite-only-security-fixes.htm"
         }
       ]
     },
@@ -81,7 +85,7 @@
       "id": "psn-lanzamiento",
       "date": "2026-11-19",
       "type": "issue",
-      "state": "open",
+      "state": "fixed",
       "platforms": [
         "ps5"
       ],
@@ -90,8 +94,8 @@
         "en": "PlayStation Network sign-in problems at launch"
       },
       "text": {
-        "es": "Miles de jugadores de PS5 vieron el mensaje de «servicios ocupados» al iniciar sesión, y a algunos no les arrancaba el juego. En algunas regiones también falló la PlayStation Store. Sony no ha explicado la causa ni Rockstar ha hecho comunicado.",
-        "en": "Thousands of PS5 players got a \"services are busy\" message when signing in, and for some the game wouldn't start. In some regions the PlayStation Store also went down. Sony hasn't explained the cause and Rockstar hasn't issued a statement."
+        "es": "Miles de jugadores de PS5 vieron el mensaje de «servicios ocupados» al iniciar sesión, y a algunos no les arrancaba el juego. En algunas regiones también falló la PlayStation Store. Sony no ha explicado la causa ni Rockstar ha hecho comunicado. Actualización: según Happy Gamer, la página de estado de PlayStation no muestra problemas desde el jueves; Sony sigue sin explicar la causa.",
+        "en": "Thousands of PS5 players got a \"services are busy\" message when signing in, and for some the game wouldn't start. In some regions the PlayStation Store also went down. Sony hasn't explained the cause and Rockstar hasn't issued a statement. Update: according to Happy Gamer, PlayStation's status page has shown no problems since Thursday; Sony still hasn't explained the cause."
       },
       "sources": [
         {
@@ -113,6 +117,10 @@
         {
           "name": "TMZ",
           "url": "https://www.tmz.com/2026/11/18/playstation-experiencing-outages/"
+        },
+        {
+          "name": "Happy Gamer",
+          "url": "https://happygamer.com/gta-6-day-4-live-updates-178460/"
         }
       ]
     },
