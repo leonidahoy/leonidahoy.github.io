@@ -42,7 +42,40 @@
     }
   ],
   "biggest": 0,
-  "more": [],
+  "more": [
+    {
+      "tag": "Negocio",
+      "title": "PlayStation habla de 39 millones de jugadores de GTA VI en PS5",
+      "change": "Según ComicBook, PlayStation dice que GTA VI ya ha llegado a 39 millones de jugadores en PS5, un récord para la plataforma. Alinea Analytics estima 44,9 millones de copias vendidas en total (33,7 en PS5 y 11,2 en Xbox), que es una estimación aparte.",
+      "plain": "Son dos medidas distintas: jugadores en PS5 y copias vendidas. No se pueden sumar ni comparar directamente.",
+      "sources": [
+        {
+          "name": "ComicBook.com",
+          "url": "https://comicbook.com/gaming/news/gta-6-ps5-sales-near-39-million-obliterate-an-all-time-playstation-record/"
+        }
+      ],
+      "detail": "La cifra de 39 millones es de PlayStation y mide jugadores, no copias. La de Alinea Analytics aparece en la cobertura del lanzamiento y es una estimación de terceros que ni Rockstar ni Take-Two han confirmado. Take-Two sigue sin publicar copias vendidas oficiales.",
+      "why": "Da otra pista de la escala del estreno, ya con datos de la plataforma."
+    },
+    {
+      "tag": "Aviso",
+      "title": "Rockstar habría cerrado el servidor de Discord de un proyecto de port de PC no oficial",
+      "change": "Según Dexerto y GamesRadar, Rockstar habría hecho caer el servidor de Discord de un proyecto que intentaba hacer un port de PC no oficial de GTA VI. PC Games Hardware cuenta que el proyecto Leonida ha desaparecido, junto con su GitHub y su Discord. Rockstar no ha anunciado versión oficial de PC.",
+      "plain": "Por ahora no hay una versión de PC, ni oficial ni no oficial. Cualquier «GTA 6 para PC» que veas es una estafa o un riesgo.",
+      "sources": [
+        {
+          "name": "Dexerto",
+          "url": "https://dexerto.com/gta/rockstar-shuts-down-discord-server-trying-to-make-gta-6-pc-port-3430905"
+        },
+        {
+          "name": "GamesRadar",
+          "url": "https://www.gamesradar.com/games/grand-theft-auto/unofficial-gta-6-pc-port-scrapped-as-rockstar-allegedly-takes-down-discord-server-hours-after-devs-managed-to-get-the-game-booting/"
+        }
+      ],
+      "detail": "Los medios usan «presuntamente»: Rockstar no ha confirmado el cierre. Los proyectos de este tipo se apoyan en material filtrado y es una zona legalmente delicada. No enlazamos ninguno. La versión de PC oficial sigue sin fecha, con un rumor de GamesBeat para el primer trimestre de 2027.",
+      "why": "Aclara que no hay vía no oficial para jugar en PC y avisa de los riesgos."
+    }
+  ],
   "rumors": [],
   "posts": [
     "El primer parche de GTA VI (01.002.002) no habría arreglado el cierre de PS5 con el error CE-108255-1, según Notebookcheck. Rockstar no ha comentado. Mantén el juego actualizado y guarda a mano. 🛠️",
@@ -95,7 +128,24 @@
         "why": "It's the biggest nod to the original Vice City so far."
       }
     ],
-    "more": [],
+    "more": [
+      {
+        "tag": "Business",
+        "title": "PlayStation says GTA VI has reached 39 million players on PS5",
+        "change": "According to ComicBook, PlayStation says GTA VI has reached 39 million players on PS5, a platform record. Alinea Analytics estimates 44.9 million copies sold in total (33.7 on PS5 and 11.2 on Xbox), which is a separate estimate.",
+        "plain": "They're two different measures: players on PS5 and copies sold. You can't add them or compare them directly.",
+        "detail": "The 39 million figure is PlayStation's and measures players, not copies. Alinea Analytics' number appears in launch coverage and is a third-party estimate that neither Rockstar nor Take-Two has confirmed. Take-Two still hasn't published official copies sold.",
+        "why": "It gives another hint of the launch's scale, now with platform data."
+      },
+      {
+        "tag": "Heads-up",
+        "title": "Rockstar reportedly took down the Discord server of an unofficial PC port project",
+        "change": "According to Dexerto and GamesRadar, Rockstar allegedly took down the Discord server of a project trying to make an unofficial PC port of GTA VI. PC Games Hardware reports the Leonida project has vanished, along with its GitHub and Discord. Rockstar hasn't announced an official PC version.",
+        "plain": "For now there's no PC version, official or unofficial. Any \"GTA 6 for PC\" you see is a scam or a risk.",
+        "detail": "Outlets say \"allegedly\": Rockstar hasn't confirmed the takedown. Projects like this rely on leaked material and are legally delicate. We link none. The official PC version still has no date, with a GamesBeat rumor for Q1 2027.",
+        "why": "It clarifies there's no unofficial route to play on PC and warns of the risks."
+      }
+    ],
     "rumors": [],
     "posts": [
       "GTA VI's first patch (01.002.002) reportedly didn't fix the PS5 crash with error CE-108255-1, per Notebookcheck. Rockstar hasn't commented. Keep the game updated and save manually. 🛠️",

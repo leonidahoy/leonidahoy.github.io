@@ -7,6 +7,30 @@
   },
   "entries": [
     {
+      "id": "bloqueo-capitulo-3",
+      "date": "2026-11-24",
+      "type": "issue",
+      "state": "open",
+      "platforms": [
+        "ps5",
+        "xbox"
+      ],
+      "title": {
+        "es": "Un bloqueo del capítulo 3 impide cambiar de personaje y sigue sin arreglo",
+        "en": "A chapter 3 softlock stops you switching characters and remains unfixed"
+      },
+      "text": {
+        "es": "Según IBTimes UK, el primer parche no soluciona un bloqueo en el capítulo 3 en el que Jason aparece en gris y no se puede cambiar de personaje. Rockstar no ha comentado ni dado fecha de arreglo. Sin spoilers.",
+        "en": "According to IBTimes UK, the first patch doesn't fix a chapter 3 softlock where Jason is greyed out and you can't switch characters. Rockstar hasn't commented or given a fix date. No spoilers."
+      },
+      "sources": [
+        {
+          "name": "IBTimes UK",
+          "url": "https://www.ibtimes.co.uk/gta-6-patch-chapter-3-softlock-red-barn-exploit-1834362"
+        }
+      ]
+    },
+    {
       "id": "update-01-002-002",
       "date": "2026-11-23",
       "type": "update",
