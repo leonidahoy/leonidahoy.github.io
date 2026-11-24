@@ -1,6 +1,29 @@
 {
-  "updated": "2026-11-22",
+  "updated": "2026-11-24",
   "items": [
+    {
+      "id": "portal-vice-city-2002",
+      "date": "2026-11-24",
+      "cat": "easter",
+      "title": {
+        "es": "Un portal secreto a la Vice City de 2002 y la camisa de Tommy Vercetti",
+        "en": "A secret portal to 2002's Vice City and Tommy Vercetti's shirt"
+      },
+      "text": {
+        "es": "Según Vice y Dot Esports, el youtuber Memeio ha encontrado unas pistas en subestaciones eléctricas que recrean un truco del GTA: Vice City original. Siguiéndolas se llega a un portal que lleva a la Vice City de 2002, donde se consigue la camisa de Tommy Vercetti. Es un hallazgo de la comunidad sin confirmar por Rockstar.",
+        "en": "According to Vice and Dot Esports, YouTuber Memeio found clues at electric substations that recreate a cheat from the original GTA: Vice City. Following them leads to a portal to 2002's Vice City, where you can get Tommy Vercetti's shirt. It's a community find not confirmed by Rockstar."
+      },
+      "sources": [
+        {
+          "name": "Vice",
+          "url": "https://www.vice.com/en/article/gta-6-tommy-vercetti-shirt-vice-city-easter-egg/"
+        },
+        {
+          "name": "Dot Esports",
+          "url": "https://dotesports.com/gta/news/gta-6-portal-vice-city-easter-egg-tommy-vercetti-time-travel"
+        }
+      ]
+    },
     {
       "id": "copias-32-5-millones",
       "date": "2026-11-22",
