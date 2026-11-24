@@ -715,6 +715,482 @@
         "es": "Historia, secundarias y 100 %",
         "en": "Story, side content and 100%"
       }
+    },
+    {
+      "id": "online",
+      "icon": "globe",
+      "updated": "2026-11-24",
+      "slug": {
+        "es": "gta-6-online-cuando-sale",
+        "en": "gta-6-online-release-date"
+      },
+      "short": {
+        "es": "Lo confirmado y lo que no",
+        "en": "What's confirmed and what isn't"
+      },
+      "title": {
+        "es": "GTA 6 Online: cuándo sale y qué se sabe del multijugador",
+        "en": "GTA 6 Online: release date and what we know about multiplayer"
+      },
+      "desc": {
+        "es": "¿Cuándo sale el modo online de GTA 6? Lo que ha confirmado Rockstar, lo que no y las fechas que circulan, separando hechos de rumores. Se actualiza cuando hay noticias.",
+        "en": "When is GTA 6's online mode coming? What Rockstar has confirmed, what it hasn't and the dates going around, separating facts from rumors. Updated as news breaks."
+      },
+      "h1": {
+        "es": "GTA 6 Online: cuándo sale",
+        "en": "GTA 6 Online: when is it coming?"
+      },
+      "lead": {
+        "es": "GTA VI salió el 19 de noviembre de 2026 solo con modo historia. Esto es lo que se sabe del multijugador, separando lo confirmado de lo que solo se comenta.",
+        "en": "GTA VI launched on November 19, 2026 with story mode only. Here's what we know about multiplayer, separating what's confirmed from what's only being talked about."
+      },
+      "quick": {
+        "es": "Rockstar no ha anunciado fecha, ventana ni nombre para el modo online de GTA 6. La fecha que más circula, 2027, es una opinión del director de Twitch, no un anuncio. Mientras tanto, el GTA Online actual seguirá recibiendo contenido.",
+        "en": "Rockstar hasn't announced a date, window or name for GTA 6's online mode. The most-quoted date, 2027, is the Twitch CEO's opinion, not an announcement. Meanwhile, the current GTA Online will keep getting content."
+      },
+      "sections": [
+        {
+          "type": "facts",
+          "title": {
+            "es": "Lo que se sabe",
+            "en": "What we know"
+          },
+          "items": [
+            {
+              "s": "ok",
+              "t": {
+                "es": "GTA VI salió sin modo online",
+                "en": "GTA VI launched without an online mode"
+              },
+              "d": {
+                "es": "El 19 de noviembre de 2026 llegó a PS5 y Xbox Series X|S como juego para un jugador.",
+                "en": "It arrived on PS5 and Xbox Series X|S on November 19, 2026 as a single-player game."
+              }
+            },
+            {
+              "s": "no",
+              "t": {
+                "es": "Sin fecha ni nombre oficiales",
+                "en": "No official date or name"
+              },
+              "d": {
+                "es": "Rockstar no ha anunciado cuándo saldrá ni cómo se llamará el modo online.",
+                "en": "Rockstar hasn't announced when the online mode will come out or what it will be called."
+              }
+            },
+            {
+              "s": "rumor",
+              "t": {
+                "es": "«En 2027», según el director de Twitch",
+                "en": "\"In 2027\", according to Twitch's CEO"
+              },
+              "d": {
+                "es": "Dan Clancy lo sugirió en una entrevista con Bloomberg. Es una opinión, no una confirmación de Rockstar.",
+                "en": "Dan Clancy suggested it in an interview with Bloomberg. It's an opinion, not a Rockstar confirmation."
+              }
+            },
+            {
+              "s": "ok",
+              "t": {
+                "es": "El GTA Online actual sigue",
+                "en": "The current GTA Online continues"
+              },
+              "d": {
+                "es": "Take-Two ha dicho que seguirá dando soporte a GTA Online después del lanzamiento de GTA VI.",
+                "en": "Take-Two has said it will keep supporting GTA Online after GTA VI's launch."
+              }
+            }
+          ]
+        }
+      ],
+      "note": {
+        "es": "Cuando Rockstar anuncie algo oficial, lo actualizaremos aquí y en Noticias. Desconfía de vídeos con fechas «filtradas» sin fuente.",
+        "en": "When Rockstar announces anything official, we'll update it here and in News. Be wary of videos with \"leaked\" dates and no source."
+      },
+      "faq": {
+        "es": [
+          [
+            "¿GTA 6 tiene modo online?",
+            "No en el lanzamiento: salió solo con modo historia. Rockstar no ha anunciado todavía cuándo llegará el online."
+          ],
+          [
+            "¿Cuándo sale GTA 6 Online?",
+            "No hay fecha oficial. La más comentada, 2027, es una opinión del director de Twitch, no un anuncio de Rockstar."
+          ],
+          [
+            "¿Se acaba GTA Online de GTA V?",
+            "No. Take-Two ha dicho que seguirá dándole soporte tras el lanzamiento de GTA VI."
+          ]
+        ],
+        "en": [
+          [
+            "Does GTA 6 have an online mode?",
+            "Not at launch: it shipped with story mode only. Rockstar hasn't announced when online will arrive."
+          ],
+          [
+            "When is GTA 6 Online coming out?",
+            "There's no official date. The most-quoted one, 2027, is the Twitch CEO's opinion, not a Rockstar announcement."
+          ],
+          [
+            "Is GTA V's GTA Online ending?",
+            "No. Take-Two has said it will keep supporting it after GTA VI's launch."
+          ]
+        ]
+      },
+      "sources": [
+        {
+          "name": "PC Gamer",
+          "url": "https://www.pcgamer.com/games/grand-theft-auto/gta-6-online-multiplayer/"
+        },
+        {
+          "name": "VICE",
+          "url": "https://www.vice.com/en/article/gta-6-online-release-date/"
+        },
+        {
+          "name": "JOE",
+          "url": "https://www.joe.co.uk/news/gta-6-online-release-date-update-leaves-fans-facing-a-longer-wait-556348"
+        },
+        {
+          "name": "GTABase",
+          "url": "https://www.gtabase.com/articles/gta-6/when-is-gta-6-online-coming-out"
+        }
+      ]
+    },
+    {
+      "id": "trofeos",
+      "icon": "trophy",
+      "updated": "2026-11-24",
+      "slug": {
+        "es": "trofeos-logros-gta-6",
+        "en": "gta-6-trophies-achievements"
+      },
+      "short": {
+        "es": "Los 55, el platino y el que se pierde",
+        "en": "All 55, the Platinum and the missable"
+      },
+      "title": {
+        "es": "Trofeos y logros de GTA 6: los 55, el platino y cuánto se tarda",
+        "en": "GTA 6 trophies and achievements: all 55, the Platinum and how long it takes"
+      },
+      "desc": {
+        "es": "Cuántos trofeos y logros tiene GTA 6, cómo se reparten, cuántas horas lleva el platino y cuál se puede perder si no lo haces a tiempo.",
+        "en": "How many trophies and achievements GTA 6 has, how they break down, how many hours the Platinum takes and which one you can miss."
+      },
+      "h1": {
+        "es": "Trofeos y logros de GTA 6",
+        "en": "GTA 6 trophies and achievements"
+      },
+      "lead": {
+        "es": "Lo esencial para ir a por el platino o los 1.000 puntos de logros, según las guías especializadas. Sin spoilers de la historia.",
+        "en": "The essentials for going after the Platinum or the 1,000 Gamerscore, according to specialist guides. No story spoilers."
+      },
+      "quick": {
+        "es": "GTA 6 tiene 55 trofeos: 1 platino, 2 de oro, 6 de plata y 46 de bronce (1.000 puntos en Xbox). Las guías calculan unas 200 horas para el platino, y el más difícil es completar el juego al 100 %.",
+        "en": "GTA 6 has 55 trophies: 1 Platinum, 2 Gold, 6 Silver and 46 Bronze (1,000 Gamerscore on Xbox). Guides estimate about 200 hours for the Platinum, and the hardest is 100% completion."
+      },
+      "sections": [
+        {
+          "type": "bars",
+          "title": {
+            "es": "Cómo se reparten (PS5)",
+            "en": "How they break down (PS5)"
+          },
+          "max": 46,
+          "items": [
+            {
+              "t": {
+                "es": "Bronce",
+                "en": "Bronze"
+              },
+              "v": 46,
+              "label": {
+                "es": "46",
+                "en": "46"
+              }
+            },
+            {
+              "t": {
+                "es": "Plata",
+                "en": "Silver"
+              },
+              "v": 6,
+              "label": {
+                "es": "6",
+                "en": "6"
+              }
+            },
+            {
+              "t": {
+                "es": "Oro",
+                "en": "Gold"
+              },
+              "v": 2,
+              "label": {
+                "es": "2",
+                "en": "2"
+              }
+            },
+            {
+              "t": {
+                "es": "Platino",
+                "en": "Platinum"
+              },
+              "v": 1,
+              "label": {
+                "es": "1",
+                "en": "1"
+              },
+              "hl": true
+            }
+          ]
+        },
+        {
+          "type": "tips",
+          "title": {
+            "es": "Lo que conviene saber",
+            "en": "Worth knowing"
+          },
+          "items": [
+            {
+              "ic": "trophy",
+              "t": {
+                "es": "Unas 200 horas para el platino",
+                "en": "About 200 hours for the Platinum"
+              },
+              "d": {
+                "es": "Es la estimación de las guías: la historia ronda las 50, y el resto se va en completar el juego al 100 %.",
+                "en": "That's the guides' estimate: the story is around 50, and the rest goes into 100% completion."
+              }
+            },
+            {
+              "ic": "lock",
+              "t": {
+                "es": "28 están ocultos",
+                "en": "28 are hidden"
+              },
+              "d": {
+                "es": "No se ve qué piden hasta conseguirlos. Muchos están ligados a la historia.",
+                "en": "You can't see what they ask for until you earn them. Many are tied to the story."
+              }
+            },
+            {
+              "ic": "save",
+              "t": {
+                "es": "Uno se puede perder",
+                "en": "One is missable"
+              },
+              "d": {
+                "es": "Las guías señalan un trofeo ligado a una meditación opcional del capítulo 1. Guarda a mano antes de avanzar si vas a por el platino.",
+                "en": "Guides flag a trophy tied to an optional meditation in Chapter 1. Save manually before moving on if you're going for the Platinum."
+              }
+            },
+            {
+              "ic": "map",
+              "t": {
+                "es": "El más difícil: el 100 %",
+                "en": "The hardest: 100%"
+              },
+              "d": {
+                "es": "Pide completar la lista del 100 %: coleccionables, actividades y retos. Lleva la cuenta en «Mi 100 %».",
+                "en": "It asks you to complete the 100% checklist: collectibles, activities and challenges. Track it in \"My 100%\"."
+              },
+              "link": "progress"
+            }
+          ]
+        }
+      ],
+      "faq": {
+        "es": [
+          [
+            "¿Cuántos trofeos tiene GTA 6?",
+            "55: 1 platino, 2 de oro, 6 de plata y 46 de bronce. En Xbox suman 1.000 puntos de logros."
+          ],
+          [
+            "¿Cuánto se tarda en sacar el platino de GTA 6?",
+            "Las guías calculan unas 200 horas, porque exige completar el juego al 100 %."
+          ],
+          [
+            "¿Hay trofeos que se puedan perder?",
+            "Las guías señalan uno, ligado a una meditación opcional del capítulo 1."
+          ]
+        ],
+        "en": [
+          [
+            "How many trophies does GTA 6 have?",
+            "55: 1 Platinum, 2 Gold, 6 Silver and 46 Bronze. On Xbox they add up to 1,000 Gamerscore."
+          ],
+          [
+            "How long does the GTA 6 Platinum take?",
+            "Guides estimate about 200 hours, because it requires 100% completion."
+          ],
+          [
+            "Are there missable trophies?",
+            "Guides flag one, tied to an optional meditation in Chapter 1."
+          ]
+        ]
+      },
+      "sources": [
+        {
+          "name": "Insider Gaming",
+          "url": "https://insider-gaming.com/complete-gta-6-trophy-list-how-to-get-all-trophies-achievements/"
+        },
+        {
+          "name": "GTABase",
+          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
+        },
+        {
+          "name": "Timesaver",
+          "url": "https://timesaver.gg/blog/gta-6-trophy-list"
+        }
+      ]
+    },
+    {
+      "id": "coleccionables",
+      "icon": "gem",
+      "updated": "2026-11-24",
+      "slug": {
+        "es": "coleccionables-100-gta-6",
+        "en": "gta-6-collectibles-100-percent"
+      },
+      "short": {
+        "es": "Cartas, escaneos y el 100 %",
+        "en": "Cards, scans and 100%"
+      },
+      "title": {
+        "es": "Coleccionables de GTA 6 y qué hace falta para el 100 %",
+        "en": "GTA 6 collectibles and what you need for 100%"
+      },
+      "desc": {
+        "es": "Los coleccionables de GTA 6 (cartas, escaneos, meteoritos…), cuántos hay, cuáles cuentan para el 100 % y qué se puede perder en el capítulo 1.",
+        "en": "GTA 6's collectibles (cards, scans, meteorites…), how many there are, which count toward 100% and what you can miss in Chapter 1."
+      },
+      "h1": {
+        "es": "Coleccionables y 100 % de GTA 6",
+        "en": "GTA 6 collectibles and 100%"
+      },
+      "lead": {
+        "es": "Qué hay que buscar por Leónida y qué cuenta para completar el juego, según las guías. Las cifras pueden ajustarse: el menú del juego es el que manda.",
+        "en": "What to hunt for around Leonida and what counts toward completion, according to guides. Numbers may shift: the in-game menu has the final say."
+      },
+      "quick": {
+        "es": "Hay 480 cartas en 18 colecciones (el 100 % pide 15 completas) y hacen falta 100 escaneos para el 100 % y su trofeo. La lista del 100 % se abre al terminar la historia, y algunos objetos del capítulo 1 se pierden si avanzas.",
+        "en": "There are 480 cards in 18 sets (100% needs 15 complete) and you need 100 scans for 100% and its trophy. The 100% checklist opens after the story, and some Chapter 1 items are lost if you move on."
+      },
+      "sections": [
+        {
+          "type": "tips",
+          "title": {
+            "es": "Qué buscar",
+            "en": "What to look for"
+          },
+          "items": [
+            {
+              "ic": "gem",
+              "t": {
+                "es": "Cartas coleccionables: 480",
+                "en": "Collectible cards: 480"
+              },
+              "d": {
+                "es": "Repartidas en 18 colecciones. Para el 100 % hacen falta 15 completas, y completar 3 da un trofeo.",
+                "en": "Spread across 18 sets. 100% needs 15 complete sets, and completing 3 earns a trophy."
+              }
+            },
+            {
+              "ic": "focus",
+              "t": {
+                "es": "Escaneos: 100",
+                "en": "Scans: 100"
+              },
+              "d": {
+                "es": "Monumentos, curiosidades y esculturas que se escanean con el móvil. Hacen falta 100 para el 100 % y para su trofeo.",
+                "en": "Landmarks, curiosities and sculptures you scan with the phone. You need 100 for 100% and its trophy."
+              }
+            },
+            {
+              "ic": "world",
+              "t": {
+                "es": "Fragmentos de meteorito",
+                "en": "Meteorite fragments"
+              },
+              "d": {
+                "es": "En la costa, bajo el agua y en el interior. Las guías aún no coinciden en el total.",
+                "en": "On the coast, underwater and inland. Guides don't agree on the total yet."
+              }
+            },
+            {
+              "ic": "save",
+              "t": {
+                "es": "Ojo al capítulo 1",
+                "en": "Watch out in Chapter 1"
+              },
+              "d": {
+                "es": "Algunos objetos de esa parte no se pueden recoger después. Explora bien antes de avanzar.",
+                "en": "Some items from that part can't be collected later. Explore well before moving on."
+              }
+            },
+            {
+              "ic": "map",
+              "t": {
+                "es": "La lista del 100 %",
+                "en": "The 100% checklist"
+              },
+              "d": {
+                "es": "Se abre al terminar la historia, en el menú de progreso y estadísticas del juego.",
+                "en": "It opens after the story, in the game's progress and stats menu."
+              },
+              "link": "progress"
+            }
+          ]
+        }
+      ],
+      "faq": {
+        "es": [
+          [
+            "¿Cuántas cartas coleccionables hay en GTA 6?",
+            "480, repartidas en 18 colecciones. Para el 100 % hacen falta 15 colecciones completas."
+          ],
+          [
+            "¿Cuántos escaneos hacen falta?",
+            "100, tanto para el 100 % como para su trofeo."
+          ],
+          [
+            "¿Hay coleccionables que se pierden?",
+            "Sí: algunos objetos del capítulo 1 no se pueden recoger después."
+          ]
+        ],
+        "en": [
+          [
+            "How many collectible cards are in GTA 6?",
+            "480, across 18 sets. 100% needs 15 complete sets."
+          ],
+          [
+            "How many scans do you need?",
+            "100, both for 100% and its trophy."
+          ],
+          [
+            "Are there missable collectibles?",
+            "Yes: some Chapter 1 items can't be collected later."
+          ]
+        ]
+      },
+      "sources": [
+        {
+          "name": "GameLeap",
+          "url": "https://www.gameleap.com/articles/gta-6-all-collectibles-and-what-you-need-for-100-completion"
+        },
+        {
+          "name": "The Big Lead",
+          "url": "https://www.thebiglead.com/gta-6-collectibles-guide-cards-styles-meteorite-chunks-landmark-scans/"
+        },
+        {
+          "name": "Push Square",
+          "url": "https://www.pushsquare.com/guides/gta-6-100percent-completion-checklist"
+        },
+        {
+          "name": "Game8",
+          "url": "https://game8.co/games/GTA-6/archives/639715"
+        }
+      ]
     }
   ]
 }

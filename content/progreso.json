@@ -1,0 +1,139 @@
+{
+  "updated": "2026-11-24",
+  "items": [
+    {
+      "id": "historia",
+      "kind": "check",
+      "ic": "map",
+      "t": {
+        "es": "Historia principal",
+        "en": "Main story"
+      },
+      "d": {
+        "es": "Márcala cuando veas los créditos. Desbloquea la lista del 100 %.",
+        "en": "Tick it when the credits roll. It unlocks the 100% checklist."
+      }
+    },
+    {
+      "id": "trofeos",
+      "kind": "count",
+      "max": 55,
+      "ic": "trophy",
+      "t": {
+        "es": "Trofeos o logros",
+        "en": "Trophies or achievements"
+      },
+      "d": {
+        "es": "55 en total, incluido el platino.",
+        "en": "55 in total, including the Platinum."
+      },
+      "link": "g:trofeos"
+    },
+    {
+      "id": "cartas",
+      "kind": "count",
+      "max": 480,
+      "ic": "gem",
+      "t": {
+        "es": "Cartas coleccionables",
+        "en": "Collectible cards"
+      },
+      "d": {
+        "es": "480 en 18 colecciones; el 100 % pide 15 completas.",
+        "en": "480 across 18 sets; 100% needs 15 complete."
+      },
+      "link": "g:coleccionables"
+    },
+    {
+      "id": "colecciones",
+      "kind": "count",
+      "max": 18,
+      "ic": "gem",
+      "t": {
+        "es": "Colecciones de cartas completas",
+        "en": "Complete card sets"
+      },
+      "d": {
+        "es": "Completar 3 da un trofeo; para el 100 % hacen falta 15.",
+        "en": "Completing 3 earns a trophy; 100% needs 15."
+      },
+      "goal": 15,
+      "link": "g:coleccionables"
+    },
+    {
+      "id": "escaneos",
+      "kind": "count",
+      "max": 100,
+      "ic": "focus",
+      "t": {
+        "es": "Escaneos",
+        "en": "Scans"
+      },
+      "d": {
+        "es": "100 para el 100 % y su trofeo.",
+        "en": "100 for 100% and its trophy."
+      },
+      "link": "g:coleccionables"
+    },
+    {
+      "id": "carreras",
+      "kind": "count",
+      "max": 40,
+      "ic": "car",
+      "t": {
+        "es": "Carreras callejeras ganadas",
+        "en": "Street races won"
+      },
+      "d": {
+        "es": "40 carreras distintas.",
+        "en": "40 different races."
+      }
+    },
+    {
+      "id": "desafios",
+      "kind": "count",
+      "max": 13,
+      "ic": "car",
+      "t": {
+        "es": "Desafíos de carreras",
+        "en": "Race challenges"
+      },
+      "d": {
+        "es": "13 en total.",
+        "en": "13 in total."
+      }
+    },
+    {
+      "id": "drones",
+      "kind": "count",
+      "max": 42,
+      "ic": "focus",
+      "t": {
+        "es": "Pruebas de dron",
+        "en": "Drone trials"
+      },
+      "d": {
+        "es": "42 pruebas contrarreloj.",
+        "en": "42 time trials."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "GameLeap",
+      "url": "https://www.gameleap.com/articles/gta-6-all-collectibles-and-what-you-need-for-100-completion"
+    },
+    {
+      "name": "Push Square",
+      "url": "https://www.pushsquare.com/guides/gta-6-100percent-completion-checklist"
+    },
+    {
+      "name": "Insider Gaming",
+      "url": "https://insider-gaming.com/complete-gta-6-trophy-list-how-to-get-all-trophies-achievements/"
+    },
+    {
+      "name": "Timesaver",
+      "url": "https://timesaver.gg/blog/gta-6-side-activities"
+    }
+  ]
+}

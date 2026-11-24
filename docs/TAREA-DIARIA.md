@@ -127,6 +127,12 @@ Son páginas que no caducan y atraen visitas de Google. **No hace falta buscar n
 - Escribe con tus palabras, sin spoilers de la historia (nada de nombres de misiones ni giros) y sin nada del modo online, glitches o mods.
 - No cambies los `slug` (romperían los enlaces). `node scripts/build.mjs` valida que no falte ningún texto en ningún idioma.
 
+## GTA 6 Online, trofeos, coleccionables y «Mi 100 %»
+
+- **GTA 6 Online** (guía `online` en `content/guias.json`): si Rockstar anuncia algo del multijugador (fecha, nombre, beta…), actualiza su lista `facts` (`"s": "ok"` confirmado, `"no"` sin anunciar, `"rumor"` rumor con quién lo dice), el `quick`, la `faq` y `updated`, en español e inglés y con la fuente. También es noticia del día.
+- **Trofeos y coleccionables** (guías `trofeos` y `coleccionables`): corrige una cifra solo si **2 guías especializadas** coinciden en el dato nuevo.
+- **«Mi 100 %»** (`content/progreso.json`): cambia un `max` o añade una categoría solo si el dato es oficial o lo confirman 2 guías. **Nunca cambies los `id`**: borrarían el progreso que la gente tiene guardado.
+
 ## Test de GTA 6 (`content/quiz.json`) — los lunes, si hay datos nuevos
 
 Junto con los trucos de los lunes: si esa semana se ha **confirmado** algo interesante y sin spoilers (un récord, una emisora nueva, un secreto famoso, un parche importante…), añade **1 o 2 preguntas** al final de `items` (no hace falta buscar nada extra: usa lo que ya está publicado en la web):

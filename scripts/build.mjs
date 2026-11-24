@@ -176,6 +176,8 @@ const loadClips = async () => {
   return { updated: raw.updated, items: out };
 };
 const CLIPS = await loadClips();
+const PROG = JSON.parse(fs.readFileSync(path.join(ROOT, "content/progreso.json"), "utf8"));
+for (const it of PROG.items) { if (!/^[a-z0-9-]+$/.test(it.id || "") || !["check", "count"].includes(it.kind) || (it.kind === "count" && !(Number.isInteger(it.max) && it.max > 0)) || !it.t?.es || !it.t?.en || !it.d?.es || !it.d?.en) throw new Error(`content/progreso.json: revisa «${it.id}» (id, kind check|count, max entero, t y d en es/en)`); }
 const QUIZ = JSON.parse(fs.readFileSync(path.join(ROOT, "content/quiz.json"), "utf8"));
 const GUIAS = JSON.parse(fs.readFileSync(path.join(ROOT, "content/guias.json"), "utf8")).guides;
 for (const g of GUIAS) for (const k of ["slug", "title", "desc", "h1", "lead", "quick"]) for (const c of ["es", "en"]) if (!g[k]?.[c]) throw new Error(`content/guias.json: a la guía «${g.id}» le falta ${k}.${c}`);
@@ -278,6 +280,8 @@ const cheatIcon = {
 };
 const gIcon = {
   ...cheatIcon,
+  globe: uiIcon.globe,
+  trophy: '<svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M7 6H4a3 3 0 0 0 3 4M17 6h3a3 3 0 0 1-3 4M12 14v3M8.5 20.5h7M9.5 17h5v3.5h-5z"/></g></svg>',
   save: '<svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 4h12.5L20 7.5V20H4z"/><path d="M8 4v5h7V4M8 20v-6h8v6"/></g></svg>',
   car: cheatIcon.vehicles,
   fuel: '<svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16M3 21h12M6.5 8h5"/><path d="M14 10h2a2 2 0 0 1 2 2v4a1.5 1.5 0 0 0 3 0V8l-3-3"/></g></svg>',
@@ -481,6 +485,7 @@ const footer = (L) => {
         <div><h2>${esc(L.t.ux.foot.community)}</h2>
           <a href="${u(P.clips)}">${esc(L.t.clips.tile)}</a>
           <a href="${u(P.quiz)}">${esc(L.t.quiz.tile)}</a>
+          <a href="${u(P.progress)}">${esc(L.t.prog.tile)}</a>
           <a href="${u(P.finds)}">${esc(L.t.tabs.finds)}</a>
         </div>
         <div><h2>${esc(L.t.ux.foot.play)}</h2>
@@ -762,7 +767,8 @@ const briefBody = (L, b) => {
       ${tile("rumors", P.rumors, tabIcon.rumors, L.t.nav.rumors, L.t.hubRumorsSub(rumors.length))}
       ${tile("patches", P.patches, findIcon.update, L.t.patch.tile, L.t.patch.level[PATCHES.status.level] || L.t.patch.tileSub)}
     </nav>
-    <a class="quiz-cta" href="${u(P.quiz)}"><span class="quiz-cta__ic" aria-hidden="true">${uiIcon.spark}</span><span class="quiz-cta__txt"><b>${esc(L.t.quiz.h1)}</b><small>${esc(L.t.quiz.tileSub)}</small></span><span class="quiz-cta__go">${esc(L.t.quiz.cta)} →</span></a>
+    <div class="cta-row"><a class="quiz-cta" href="${u(P.progress)}"><span class="quiz-cta__ic quiz-cta__ic--prog" aria-hidden="true">${gIcon.trophy}</span><span class="quiz-cta__txt"><b>${esc(L.t.prog.h1)}</b><small>${esc(L.t.prog.tileSub)}</small></span><span class="quiz-cta__go">${esc(L.t.prog.cta)} →</span></a>
+    <a class="quiz-cta" href="${u(P.quiz)}"><span class="quiz-cta__ic" aria-hidden="true">${uiIcon.spark}</span><span class="quiz-cta__txt"><b>${esc(L.t.quiz.h1)}</b><small>${esc(L.t.quiz.tileSub)}</small></span><span class="quiz-cta__go">${esc(L.t.quiz.cta)} →</span></a></div>
     ${adUnit(L, "top")}
   </div>
   ${
@@ -1412,11 +1418,13 @@ for (const code of ACTIVE) {
     const section = (sec) => {
       const title = `<div class="block__head"><h2>${esc(sec.title[code])}</h2></div>`;
       if (sec.type === "tips")
-        return `<section class="block">${title}<ol class="tips">${sec.items.map((it) => `<li class="tip"><span class="tip__ic" aria-hidden="true">${gIcon[it.ic] || gIcon.tips}</span><div><h3>${esc(it.t[code])}</h3><p>${esc(it.d[code])}</p>${it.link === "cheats" ? `<a class="tip__more" href="${u(P.cheats)}">${esc(G.seeCheats)}</a>` : ""}</div></li>`).join("")}</ol></section>`;
+        return `<section class="block">${title}<ol class="tips">${sec.items.map((it) => `<li class="tip"><span class="tip__ic" aria-hidden="true">${gIcon[it.ic] || gIcon.tips}</span><div><h3>${esc(it.t[code])}</h3><p>${esc(it.d[code])}</p>${it.link === "cheats" ? `<a class="tip__more" href="${u(P.cheats)}">${esc(G.seeCheats)}</a>` : it.link === "progress" ? `<a class="tip__more" href="${u(P.progress)}">${esc(G.seeProgress)}</a>` : ""}</div></li>`).join("")}</ol></section>`;
       if (sec.type === "methods")
-        return `<section class="block">${title}<ol class="methods">${sec.items.map((it) => `<li class="method method--s${it.stage}"><span class="method__dot" aria-hidden="true">${gIcon[it.ic] || gIcon.money}</span><div class="method__body"><div class="method__top"><h3>${esc(it.t[code])}</h3><span class="method__pay">${esc(it.pay[code])}</span></div><p class="method__when"><span class="method__stage">${esc(G.stage[it.stage] || "")}</span> ${esc(it.when[code])}</p><p>${esc(it.d[code])}</p>${it.link === "cheats" ? `<a class="tip__more" href="${u(P.cheats)}">${esc(G.seeCheats)}</a>` : ""}</div></li>`).join("")}</ol></section>`;
+        return `<section class="block">${title}<ol class="methods">${sec.items.map((it) => `<li class="method method--s${it.stage}"><span class="method__dot" aria-hidden="true">${gIcon[it.ic] || gIcon.money}</span><div class="method__body"><div class="method__top"><h3>${esc(it.t[code])}</h3><span class="method__pay">${esc(it.pay[code])}</span></div><p class="method__when"><span class="method__stage">${esc(G.stage[it.stage] || "")}</span> ${esc(it.when[code])}</p><p>${esc(it.d[code])}</p>${it.link === "cheats" ? `<a class="tip__more" href="${u(P.cheats)}">${esc(G.seeCheats)}</a>` : it.link === "progress" ? `<a class="tip__more" href="${u(P.progress)}">${esc(G.seeProgress)}</a>` : ""}</div></li>`).join("")}</ol></section>`;
       if (sec.type === "stations")
         return `<section class="block">${title}<div class="stations">${sec.items.map((it) => `<article class="station" style="--h:${Number(it.hue) || 0}"><span class="station__ic" aria-hidden="true">${gIcon.radio}</span><div><h3>${esc(it.name)}</h3><span class="station__genre">${esc(it.genre[code])}</span><p><b>${esc(G.hosts)}:</b> ${esc(it.hosts)}</p></div></article>`).join("")}</div></section>`;
+      if (sec.type === "facts")
+        return `<section class="block">${title}<ul class="facts-st">${sec.items.map((it) => `<li class="fst fst--${esc(it.s)}"><span class="fst__chip">${it.s === "ok" ? I(uiIcon.check) : it.s === "rumor" ? I(uiIcon.warn) : I(gIcon.clock)}${esc(G.facts[it.s] || "")}</span><div><h3>${esc(it.t[code])}</h3><p>${esc(it.d[code])}</p></div></li>`).join("")}</ul></section>`;
       if (sec.type === "bars")
         return `<section class="block">${title}<ul class="hbars">${sec.items.map((it) => `<li class="${it.hl ? "is-hl" : ""}"><span class="hbars__t">${esc(it.t[code])}</span><span class="hbars__track"><span class="hbars__fill" style="--w:${Math.min(100, Math.round((it.v / (sec.max || 100)) * 100))}%"></span></span><b class="hbars__v">${esc(it.label[code])}</b></li>`).join("")}</ul></section>`;
       return "";
@@ -1464,6 +1472,7 @@ for (const code of ACTIVE) {
         { href: P.cheats, ic: gIcon.cheat, t: L.t.cheats.h1, d: L.t.cheats.tileSub(TRUCOS.cheats.filter((c) => c.seq).length) },
         { href: P.finds, ic: findIcon.easter, t: L.t.finds.h1, d: L.t.finds.tileSub(FINDS.items.length) },
         { href: P.clips, ic: tabIcon.community, t: L.t.clips.h1, d: L.t.clips.tileSub(CLIPS.items.length) },
+        { href: P.progress, ic: gIcon.trophy, t: L.t.prog.h1, d: L.t.prog.tileSub },
         { href: P.quiz, ic: uiIcon.spark, t: L.t.quiz.tile, d: L.t.quiz.tileSub },
         gItem(gi("consejos")), gItem(gi("dinero")), gItem(gi("duracion")), gItem(gi("radio")),
         ...GUIAS.filter((x) => !["consejos", "dinero", "duracion", "radio"].includes(x.id)).map(gItem),
@@ -1523,6 +1532,7 @@ for (const code of ACTIVE) {
     for (const c of TRUCOS.cheats) add("cheat", c.name[code] || c.name.es, `${c.effect[code] || c.effect.es}${c.unlock ? " " + (c.unlock[code] || c.unlock.es) : ""}`, `${P.cheats}#${c.id}`, c.added, `${L.t.cheats.cats[c.cat] || ""} ${L.t.cheats.tile}`);
     add("page", L.t.clips.h1, L.t.clips.desc, P.clips, null, "videos youtube tiktok shorts");
     add("page", L.t.quiz.h1, L.t.quiz.desc, P.quiz, null, "test quiz trivial preguntas");
+    add("page", L.t.prog.h1, L.t.prog.desc, P.progress, null, "100 % completar progreso contador trofeos cartas escaneos carreras drones platino");
     for (const c of CLIPS.items) add("clip", c.title, `${c.author} · ${PLATFORM[c.platform]} · ${c.note?.[code] || c.note?.es || ""}`, `${P.clips}#clip-${c.id}`, c.date, L.t.clips.cats[c.cat] || "");
     for (const f of FINDS.items) add("find", f.title[code] || f.title.es, f.text[code] || f.text.es, `${P.finds}#${f.id}`, f.date, L.t.finds.cats[f.cat] || "");
     for (const e of PATCHES.entries) add("patch", e.title[code] || e.title.es, e.text[code] || e.text.es, `${P.patches}#${e.id}`, e.date);
@@ -1548,6 +1558,55 @@ for (const code of ACTIVE) {
   </div>`,
     })
   );
+
+  // Mi 100 %: contador de progreso personal (se guarda en el dispositivo)
+  {
+    const T = L.t.prog;
+    const linkOf = (k) => (k && k.startsWith("g:") ? (GUIAS.find((g) => g.id === k.slice(2)) ? P.guideItem(GUIAS.find((g) => g.id === k.slice(2)).slug[code]) : "") : "");
+    const row = (it) => {
+      const max = it.goal || it.max || 1;
+      const lk = linkOf(it.link);
+      return `<li class="pg" data-pg="${esc(it.id)}" data-kind="${it.kind}" data-max="${it.max || 1}" data-goal="${max}">
+        <span class="pg__ic" aria-hidden="true">${gIcon[it.ic] || gIcon.map}</span>
+        <div class="pg__body">
+          <div class="pg__top"><h3>${esc(it.t[code])}</h3>${lk ? `<a class="pg__guide" href="${u(lk)}">${esc(T.guide)}</a>` : ""}</div>
+          <p class="pg__d">${esc(it.d[code])}</p>
+          ${
+            it.kind === "check"
+              ? `<button type="button" class="pg__check" data-pg-check aria-pressed="false" data-on="${esc(T.done)}" data-off="${esc(T.todo)}">${I(uiIcon.check)}<span>${esc(T.todo)}</span></button>`
+              : `<div class="pg__ctl"><button type="button" class="pg__btn" data-pg-step="-1" aria-label="${esc(T.minus)}">−</button><label class="pg__val"><input type="number" inputmode="numeric" min="0" max="${it.max}" value="0" data-pg-input aria-label="${esc(T.edit)}: ${esc(it.t[code])}"><span>/ ${it.goal ? `${it.goal} (${it.max})` : it.max}</span></label><button type="button" class="pg__btn" data-pg-step="1" aria-label="${esc(T.plus)}">+</button></div>
+          <div class="pg__bar"><span style="width:0%"></span></div>`
+          }
+        </div>
+      </li>`;
+    };
+    write(
+      P.progress,
+      layout(L, {
+        title: T.title,
+        description: T.desc,
+        key: "progress",
+        active: "guide",
+        jsonLd: [crumbsLd([[L.t.crumbHome, P.home], [L.t.gd.indexH1, P.guides], [T.h1, P.progress]])],
+        body: `
+  <section class="page-head page-head--progress"><div class="wrap"><p class="eyebrow">${esc(T.eyebrow)}</p><h1>${esc(T.h1)}</h1><p class="lead-text">${esc(T.lead)}</p></div></section>
+  <div class="wrap layout">
+    <div class="col-main">
+      <div class="progress-app" data-progress-app data-ask="${esc(T.resetAsk)}">
+        <div class="pg-total"><div class="score-ring pg-total__ring" style="--p:0"><b data-pg-total>0</b><small>%</small></div><div><h2>${esc(T.total)}</h2><p class="muted small">${I(bookmarkSvg)} ${esc(T.saved)}</p></div></div>
+        <ul class="pg-list">${PROG.items.map(row).join("")}</ul>
+        <button type="button" class="btn btn--ghost pg-reset" data-pg-reset>${esc(T.reset)}</button>
+      </div>
+      <p class="muted small">${esc(T.note)}</p>
+      ${sourcesHtml(L, PROG.sources)}
+      ${adUnit(L, "bottom")}
+    </div>
+    <aside class="col-side">${sideCards(L)}</aside>
+  </div>`,
+      })
+    );
+    sitemap.push(["progress", P.progress, PROG.updated, "weekly", "0.7"]);
+  }
 
   // Test: ¿cuánto sabes de GTA 6?
   {

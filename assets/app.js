@@ -921,6 +921,57 @@
     if (changed || first) store.set("lh-seen", JSON.stringify(seen));
   })();
 
+  // ================= Mi 100 %: contador de progreso (en el dispositivo) =================
+  (function () {
+    var app = document.querySelector("[data-progress-app]");
+    if (!app) return;
+    var KEY = "lh-progress";
+    var st = {}; try { st = JSON.parse(store.get(KEY) || "{}") || {}; } catch (e) {}
+    var rows = app.querySelectorAll("[data-pg]");
+    var totalEl = app.querySelector("[data-pg-total]"), ring = app.querySelector(".pg-total__ring");
+    var save = function () { store.set(KEY, JSON.stringify(st)); };
+    function paint() {
+      var sum = 0, n = 0;
+      rows.forEach(function (r) {
+        var id = r.getAttribute("data-pg"), kind = r.getAttribute("data-kind"), max = +r.getAttribute("data-max"), goal = +r.getAttribute("data-goal") || max;
+        var v = Math.max(0, Math.min(max, +st[id] || 0));
+        if (kind === "check") {
+          var b = r.querySelector("[data-pg-check]"), on = v >= 1;
+          b.setAttribute("aria-pressed", String(on)); b.querySelector("span").textContent = b.getAttribute(on ? "data-on" : "data-off");
+          r.classList.toggle("is-done", on); sum += on ? 1 : 0;
+        } else {
+          var inp = r.querySelector("[data-pg-input]");
+          if (document.activeElement !== inp) inp.value = v;
+          var pct = Math.min(1, v / goal);
+          r.querySelector(".pg__bar span").style.width = Math.round(pct * 100) + "%";
+          r.classList.toggle("is-done", pct >= 1); sum += pct;
+        }
+        n++;
+      });
+      var total = n ? Math.round(sum / n * 100) : 0;
+      totalEl.textContent = total; ring.style.setProperty("--p", total);
+    }
+    app.addEventListener("click", function (e) {
+      var r = e.target.closest("[data-pg]"); if (!r) return;
+      var id = r.getAttribute("data-pg"), max = +r.getAttribute("data-max");
+      var step = e.target.closest("[data-pg-step]");
+      if (step) { st[id] = Math.max(0, Math.min(max, (+st[id] || 0) + (+step.getAttribute("data-pg-step")))); buzz(); save(); paint(); return; }
+      if (e.target.closest("[data-pg-check]")) { st[id] = (+st[id] || 0) >= 1 ? 0 : 1; buzz(); save(); paint(); }
+    });
+    app.addEventListener("input", function (e) {
+      var inp = e.target.closest("[data-pg-input]"); if (!inp) return;
+      var r = inp.closest("[data-pg]"), max = +r.getAttribute("data-max");
+      var v = parseInt(inp.value, 10); if (isNaN(v)) return;
+      st[r.getAttribute("data-pg")] = Math.max(0, Math.min(max, v)); save(); paint();
+    });
+    app.addEventListener("focusout", function (e) { if (e.target.matches && e.target.matches("[data-pg-input]")) paint(); });
+    app.querySelector("[data-pg-reset]").addEventListener("click", function () {
+      if (window.confirm(app.getAttribute("data-ask") || "?")) { st = {}; save(); paint(); }
+    });
+    window.addEventListener("storage", function (e) { if (e.key === KEY) { try { st = JSON.parse(e.newValue || "{}") || {}; } catch (x) {} paint(); } });
+    paint();
+  })();
+
   // ================= Test: ¿cuánto sabes de GTA 6? =================
   (function () {
     var box = document.querySelector("[data-quiz]"), dataEl = document.getElementById("quiz-data");

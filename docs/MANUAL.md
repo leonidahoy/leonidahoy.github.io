@@ -111,3 +111,8 @@ Una tarea programada de Claude se ejecuta cada mañana: busca las noticias de GT
 - **Novedades en las pestañas.** Si una sección cambió desde la última visita (Noticias, Trucos, Comunidad o Guías), su pestaña muestra un punto rosa, que desaparece al entrar. Se calcula con una «firma» del contenido que genera la web al publicar y se guarda en el propio dispositivo.
 - **Guardados.** Botón de marcador en noticias, rumores, guías, trucos, secretos y clips. Se ven en `/guardados/` (`/en/saved/`; enlace en el pie) y en el buscador cuando no se ha escrito nada. Se guardan solo en el dispositivo: sin cuentas ni datos personales. Esa página no se indexa.
 - **Test «¿Cuánto sabes de GTA 6?»** (`/test-gta-6/`, `/en/gta-6-quiz/`): 10 preguntas al azar de `content/quiz.json`, con las opciones barajadas, explicación y enlace a la página con el dato. Al final muestra la nota, la mejor marca y botones para compartir (X, WhatsApp, Telegram o el menú del móvil). Se valida con `node scripts/check-quiz.mjs`.
+
+## Para jugadores: «Mi 100 %» y guías de trofeos, coleccionables y Online
+- **«Mi 100 %»** (`/progreso-gta-6/`, `/en/gta-6-progress/`): contador personal de historia, trofeos (55), cartas (480 / 18 colecciones), escaneos (100), carreras (40), desafíos (13) y pruebas de dron (42). Tiene botones de sumar y restar, se puede escribir la cantidad, y muestra barras y el porcentaje total. Se guarda en el dispositivo. Los datos están en `content/progreso.json`: no cambies los `id`.
+- **Guías nuevas:** «GTA 6 Online: cuándo sale» (con etiquetas Confirmado / Sin anunciar / Rumor), «Trofeos y logros» y «Coleccionables y 100 %».
+- En la portada, «Mi 100 %» y el test aparecen como dos accesos destacados bajo las tarjetas.
