@@ -34,8 +34,43 @@
     }
   ],
   "biggest": 0,
-  "more": [],
-  "rumors": [],
+  "more": [
+    {
+      "tag": "Aviso",
+      "title": "Take-Two hace retirar de GitHub el proyecto de port de PC Leonida y sus copias",
+      "change": "Según PC Games Hardware, Take-Two ha hecho que GitHub retire, mediante un aviso DMCA, el proyecto no oficial Leonida y sus copias, más de 3.000 repositorios. Rockstar sigue sin anunciar una versión oficial de PC.",
+      "plain": "El intento de port no oficial de PC ha sido retirado por la vía legal. No hay forma legítima de jugar a GTA VI en PC por ahora.",
+      "sources": [
+        {
+          "name": "PC Games Hardware",
+          "url": "https://www.pcgameshardware.de/GTA-6-Spiel-55239/News/PC-Port-Prolog-spielbar-ZETTROX-Leonida-DMCA-1561000/"
+        }
+      ],
+      "detail": "El aviso DMCA se basa en que los archivos proceden de material robado. La fuente está en alemán y no enlazamos ningún proyecto ni archivo. Quedan otros proyectos similares y también corren riesgo de retirada. Un rumor de GamesBeat sitúa la versión oficial de PC en el primer trimestre de 2027.",
+      "why": "Aclara el estado legal de los ports no oficiales y avisa de sus riesgos."
+    }
+  ],
+  "rumors": [
+    {
+      "title": "Circula que Rockstar sacaría hoy un parche de rendimiento; no hay confirmación",
+      "change": "Una publicación viral en X decía que Rockstar lanzaría hoy, 25 de noviembre, un parche contra los tirones y que habría pedido disculpas. PC Games Hardware no encontró ni la disculpa ni una fecha en el Newswire ni en el soporte de Rockstar.",
+      "plain": "No hay ningún parche anunciado para hoy. Es un bulo o un rumor sin respaldo.",
+      "reliability": "baja",
+      "who": "Publicación viral en X · PC Games Hardware lo desmiente",
+      "sources": [
+        {
+          "name": "PC Games Hardware",
+          "url": "https://www.pcgameshardware.de/GTA-6-Spiel-55239/News/GTA-6-Is-a-new-update-to-fix-stuttering-coming-today-1561060/"
+        },
+        {
+          "name": "PC Games Hardware (explicación)",
+          "url": "https://www.pcgameshardware.de/GTA-6-Spiel-55239/News/Update-25-November-2026-Performance-Patch-PS5-Xbox-1561056/"
+        }
+      ],
+      "detail": "Las notas del parche 01.002.002 no mencionan cambios de renderizado ni un arreglo concreto de los tirones. Rockstar no ha dicho cuándo llegará el siguiente parche. Si ves una fecha concreta, comprueba el Newswire de Rockstar antes de compartirla.",
+      "why": "Evita difundir una fecha de parche que nadie ha confirmado."
+    }
+  ],
   "posts": [
     "Nuevo secreto en GTA VI: un payaso inspirado en «It» aparece en un hotel de Vice Beach, según Game Rant. Parece depender de la hora del juego: de madrugada sí, a las 20:00 no. 🎈",
     "La casa de Belville que salió en San Andreas en 2021 esconde mensajes de un NPC que ha descubierto que todo es un videojuego, según DualShockers. Un guiño muy Rockstar. 🏠",
@@ -87,8 +122,26 @@
         "why": "It closes the story of the house hidden in San Andreas with an unexpected joke."
       }
     ],
-    "more": [],
-    "rumors": [],
+    "more": [
+      {
+        "tag": "Heads-up",
+        "title": "Take-Two has GitHub remove the unofficial PC port project Leonida and its copies",
+        "change": "According to PC Games Hardware, Take-Two has had GitHub remove, via a DMCA notice, the unofficial Leonida project and its copies, more than 3,000 repositories. Rockstar still hasn't announced an official PC version.",
+        "plain": "The unofficial PC port attempt has been removed through legal channels. There's no legitimate way to play GTA VI on PC for now.",
+        "detail": "The DMCA notice is based on the files coming from stolen material. The source is in German and we link no project or file. Other similar projects remain and also risk removal. A GamesBeat rumor puts the official PC version in Q1 2027.",
+        "why": "It clarifies the legal status of unofficial ports and warns of their risks."
+      }
+    ],
+    "rumors": [
+      {
+        "title": "A performance patch from Rockstar reportedly lands today; no confirmation",
+        "change": "A viral X post claimed Rockstar would release a stutter-fixing patch today, November 25, and had apologized. PC Games Hardware found neither the apology nor a date on Rockstar's Newswire or support site.",
+        "plain": "No patch is announced for today. It's a hoax or an unbacked rumor.",
+        "detail": "Patch 01.002.002's notes don't mention rendering changes or a specific stutter fix. Rockstar hasn't said when the next patch will arrive. If you see a specific date, check Rockstar's Newswire before sharing it.",
+        "why": "It keeps you from spreading a patch date nobody has confirmed.",
+        "who": "Viral X post · debunked by PC Games Hardware"
+      }
+    ],
     "posts": [
       "New GTA VI secret: a clown inspired by \"It\" appears in a Vice Beach hotel, per Game Rant. It seems to depend on in-game time: yes in the small hours, no at 8 p.m. 🎈",
       "The Belville house that showed up in San Andreas in 2021 hides messages from an NPC who discovered it's all a video game, per DualShockers. A very Rockstar nod. 🏠",

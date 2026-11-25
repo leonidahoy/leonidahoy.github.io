@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "status": {
     "level": "watch",
     "es": "Ya hay una primera actualización con notas oficiales (01.002.002, 23 de noviembre) que corrige varios cierres y el autoguardado, pero no el error CE-108255-1 que cierra el juego en algunas PS5, según Notebookcheck.",
@@ -104,8 +104,8 @@
         "en": "A bug closes the game on PS5 and returns to the menu"
       },
       "text": {
-        "es": "Según DualShockers, un bug está cerrando GTA VI en PS5 durante las partidas. Ni Sony ni Rockstar han dado una causa ni un arreglo, y los reportes apuntan solo a PS5. Consejo: guarda a mano y mantén la consola actualizada. Actualización: el parche 01.002.002 corrige varias causas de cierres; falta ver si cubre este caso. Actualización del 24 de noviembre: según Notebookcheck, el parche 01.002.002 no arregla el error CE-108255-1 en PS5.",
-        "en": "According to DualShockers, a bug is closing GTA VI on PS5 mid-session. Neither Sony nor Rockstar has given a cause or a fix, and reports point only to PS5. Tip: save manually and keep your console up to date. Update: patch 01.002.002 fixes several causes of crashes; it remains to be seen whether it covers this case. Update of November 24: according to Notebookcheck, patch 01.002.002 does not fix error CE-108255-1 on PS5."
+        "es": "Según DualShockers, un bug cierra GTA VI en PS5 durante las partidas. Ni Sony ni Rockstar han dado causa ni arreglo. Notebookcheck cuenta que el parche 01.002.002 no arregla el error CE-108255-1, y Gizmodo (25 de noviembre) que la PS5 sigue cerrándose en algunos casos. Consejo: guarda a mano y mantén la consola actualizada.",
+        "en": "According to DualShockers, a bug closes GTA VI on PS5 mid-session. Neither Sony nor Rockstar has given a cause or fix. Notebookcheck says patch 01.002.002 does not fix error CE-108255-1, and Gizmodo (November 25) that PS5 is still crashing in some cases. Tip: save manually and keep your console updated."
       },
       "sources": [
         {
@@ -115,6 +115,10 @@
         {
           "name": "Notebookcheck",
           "url": "https://www.notebookcheck.net/GTA-6-update-fails-to-fix-PS5-crash-CE-108255-1-as-patch-disappoints-console-owners.1458054.0.html"
+        },
+        {
+          "name": "Gizmodo",
+          "url": "https://gizmodo.com/gta-vi-crashing-ps5-2000845327"
         }
       ]
     },
