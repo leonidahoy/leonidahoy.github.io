@@ -1,6 +1,44 @@
 {
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "items": [
+    {
+      "id": "payaso-it",
+      "date": "2026-11-25",
+      "cat": "reference",
+      "title": {
+        "es": "Un payaso al estilo de «It» en un hotel de Vice Beach",
+        "en": "An \"It\"-style clown in a Vice Beach hotel"
+      },
+      "text": {
+        "es": "Según Game Rant, un guiño al payaso de «It» aparece en un hotel de Vice Beach. Un redactor no lo vio hacia las 20:00 pero sí de madrugada, así que parece depender de la hora del juego. Es un hallazgo de jugadores, sin confirmar por Rockstar.",
+        "en": "According to Game Rant, a nod to the clown from \"It\" appears in a Vice Beach hotel. A writer didn't see it around 8 p.m. but did in the small hours, so it seems to depend on in-game time. It's a player find, not confirmed by Rockstar."
+      },
+      "sources": [
+        {
+          "name": "Game Rant",
+          "url": "https://gamerant.com/gta-6-it-the-clown-easter-egg-secret-location-find/"
+        }
+      ]
+    },
+    {
+      "id": "casa-belville-npc",
+      "date": "2026-11-25",
+      "cat": "curiosity",
+      "title": {
+        "es": "La casa de Belville guarda mensajes de un NPC que sabe que todo es un videojuego",
+        "en": "The Belville house holds messages from an NPC who knows it's all a video game"
+      },
+      "text": {
+        "es": "Según DualShockers, la casa de Belville que salió en San Andreas en 2021 contiene mensajes de un NPC que ha descubierto que su mundo es un videojuego y que él es un personaje no jugable. Es un chiste que rompe la cuarta pared, sin relación con la trama.",
+        "en": "According to DualShockers, the Belville house that appeared in San Andreas in 2021 contains messages from an NPC who has discovered his world is a video game and that he is a non-playable character. It's a fourth-wall joke, unrelated to the plot."
+      },
+      "sources": [
+        {
+          "name": "DualShockers",
+          "url": "https://www.dualshockers.com/gta-6-easter-egg-has-one-npc-work-out-the-game-s-biggest-secret/"
+        }
+      ]
+    },
     {
       "id": "portal-vice-city-2002",
       "date": "2026-11-24",

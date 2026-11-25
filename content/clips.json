@@ -1,6 +1,32 @@
 {
-  "updated": "2026-11-22",
+  "updated": "2026-11-25",
   "items": [
+    {
+      "id": "abuelas-juegan",
+      "url": "https://www.youtube.com/shorts/fLVIi1qS18o",
+      "lang": "es",
+      "date": "2026-11-25",
+      "cat": "humor",
+      "title": "(Video) \"¡HASTA LAS ABUELAS JUEGAN GTA 6!\"",
+      "by": null,
+      "note": {
+        "es": "Un short de humor sobre lo extendido que está el juego, hasta entre quienes menos se lo esperan.",
+        "en": "A comedy short about how widespread the game is, even among the people you least expect."
+      }
+    },
+    {
+      "id": "poner-gta-espanol",
+      "url": "https://www.tiktok.com/@profegamingtv/video/7710117909229522190",
+      "lang": "es",
+      "date": "2026-11-25",
+      "cat": "tips",
+      "title": "Como poner GTA VI en Español? #ProfeGamingTV #MLBTheShow",
+      "by": null,
+      "note": {
+        "es": "Un creador explica cómo cambiar el idioma del juego al español.",
+        "en": "A creator explains how to switch the game language to Spanish."
+      }
+    },
     {
       "id": "ajuste-tv-60fps",
       "url": "https://www.tiktok.com/@gatorproductions5/video/7709109637252959510",
