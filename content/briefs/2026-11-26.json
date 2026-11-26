@@ -34,7 +34,50 @@
     }
   ],
   "biggest": 0,
-  "more": [],
+  "more": [
+    {
+      "tag": "Estudio",
+      "title": "El voto sindical en Rockstar Reino Unido fracasa: el 75 % vota en contra",
+      "change": "Según Kotaku, el 75 % de la plantilla de Rockstar en Reino Unido votó en contra del acuerdo de reconocimiento del sindicato IWGB en la votación del 12 al 26 de noviembre. El caso de los despidos de hace un año sigue pendiente de sentencia.",
+      "plain": "La plantilla ha decidido, por amplia mayoría, no reconocer al sindicato por ahora.",
+      "sources": [
+        {
+          "name": "Kotaku",
+          "url": "https://kotaku.com/rockstar-games-union-vote-fails-as-75-percent-of-devs-vote-no-2001000621"
+        }
+      ],
+      "detail": "Es el resultado de la votación que contamos el 14 de noviembre. La votación coincidió con el lanzamiento del juego. Los despidos de hace un año, que la plantilla y el sindicato consideraron una represalia, siguen pendientes de sentencia. Rockstar no ha comentado el resultado en los resultados que hemos visto.",
+      "why": "Cierra, por ahora, la votación que coincidió con el estreno."
+    },
+    {
+      "tag": "Negocio",
+      "title": "Rockstar regala 100 PS5 Pro personalizadas de GTA VI que no están a la venta",
+      "change": "Según TweakTown, Rockstar está repartiendo, sin venderlas, al menos 100 consolas PS5 Pro personalizadas con GTA VI, primero a jugadores de los Miami Heat y ahora a streamers e influencers.",
+      "plain": "Son consolas de regalo para promoción: no se pueden comprar.",
+      "sources": [
+        {
+          "name": "TweakTown",
+          "url": "https://www.tweaktown.com/news/114892/rockstar-is-handing-out-100-of-these-gorgeous-limited-edition-gta-6-ps5-consoles-and-you-cant-buy-one/index.html"
+        }
+      ],
+      "detail": "Es una acción de marketing y no una edición a la venta. Los resultados no dan más detalles sobre el diseño ni sobre el reparto. Si ves una de estas consolas a la venta, puede ser una falsificación o una reventa de un regalo.",
+      "why": "Evita pagar de más por una consola que Rockstar solo regala."
+    },
+    {
+      "tag": "Aviso",
+      "title": "Aumentan los reportes de cierres y errores en PS5 con GTA VI, sin causa confirmada",
+      "change": "PC Games Hardware informa de más reportes de cierres, mensajes de error y posibles daños en consolas PS5 al jugar a GTA VI. No hay un vínculo causal confirmado entre el juego y los fallos de hardware, ni comunicado de Sony o Rockstar.",
+      "plain": "Si tu PS5 se calienta o se cierra, guarda a mano, ventila la consola y consulta el soporte de Sony.",
+      "sources": [
+        {
+          "name": "PC Games Hardware",
+          "url": "https://www.pcgameshardware.de/GTA-6-Spiel-55239/News/Probleme-PS5-Abstuerze-Fehlermeldungen-Hardware-Konsolen-Schaden-1561172/"
+        }
+      ],
+      "detail": "La fuente está en alemán y habla de reportes de jugadores, no de datos de Sony. Los cierres y el error CE-108255-1 siguen en la sección de parches y problemas. Si notas un daño en la consola, contacta con el soporte de PlayStation y conserva el justificante de compra.",
+      "why": "Te ayuda a actuar con prudencia mientras no haya una explicación oficial."
+    }
+  ],
   "rumors": [],
   "posts": [
     "El autor de la filtración de 2022 de GTA VI ha sido condenado a siete años y habría salido en libertad el mismo día, según TweakTown. Rockstar no ha comentado la sentencia. ⚖️",
@@ -87,7 +130,32 @@
         "why": "It shows how the game's soundtrack moves the music charts."
       }
     ],
-    "more": [],
+    "more": [
+      {
+        "tag": "Studio",
+        "title": "The union vote at Rockstar UK fails: 75% vote no",
+        "change": "According to Kotaku, 75% of Rockstar's UK staff voted against the IWGB union recognition agreement in the November 12 to 26 vote. The case of last year's dismissals is still awaiting a ruling.",
+        "plain": "Staff have decided, by a wide majority, not to recognize the union for now.",
+        "detail": "It's the result of the vote we covered on November 14. The vote coincided with the game's launch. Last year's dismissals, which staff and the union called retaliation, are still awaiting a ruling. We haven't seen Rockstar comment on the result in the results.",
+        "why": "It closes, for now, the vote that coincided with launch."
+      },
+      {
+        "tag": "Business",
+        "title": "Rockstar is giving away 100 custom GTA VI PS5 Pros that aren't for sale",
+        "change": "According to TweakTown, Rockstar is handing out, not selling, at least 100 custom GTA VI PS5 Pro consoles, first to Miami Heat players and now to streamers and influencers.",
+        "plain": "They're promotional giveaway consoles: you can't buy them.",
+        "detail": "It's a marketing push, not an edition on sale. The results give no more detail on the design or the distribution. If you see one of these consoles for sale, it may be a fake or a resale of a gift.",
+        "why": "It saves you from overpaying for a console Rockstar only gives away."
+      },
+      {
+        "tag": "Heads-up",
+        "title": "Reports of crashes and errors on PS5 with GTA VI are rising, with no confirmed cause",
+        "change": "PC Games Hardware reports more reports of crashes, error messages and possible damage to PS5 consoles while playing GTA VI. There is no confirmed causal link between the game and the hardware faults, and no statement from Sony or Rockstar.",
+        "plain": "If your PS5 gets hot or shuts down, save manually, ventilate the console and check Sony's support.",
+        "detail": "The source is in German and talks about player reports, not Sony data. The crashes and error CE-108255-1 remain in the patches and issues section. If you notice damage to your console, contact PlayStation support and keep your proof of purchase.",
+        "why": "It helps you act prudently while there is no official explanation."
+      }
+    ],
     "rumors": [],
     "posts": [
       "The author of the 2022 GTA VI leak has been sentenced to seven years and reportedly walked free the same day, per TweakTown. Rockstar hasn't commented on the sentence. ⚖️",

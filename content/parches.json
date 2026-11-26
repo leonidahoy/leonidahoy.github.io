@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "status": {
     "level": "watch",
     "es": "Ya hay una primera actualización con notas oficiales (01.002.002, 23 de noviembre) que corrige varios cierres y el autoguardado, pero no el error CE-108255-1 que cierra el juego en algunas PS5, según Notebookcheck.",
@@ -27,6 +27,10 @@
         {
           "name": "IBTimes UK",
           "url": "https://www.ibtimes.co.uk/gta-6-patch-chapter-3-softlock-red-barn-exploit-1834362"
+        },
+        {
+          "name": "Game Rant",
+          "url": "https://gamerant.com/gta-6-patch-jason-grayed-out-cant-switch-bug/"
         }
       ]
     },
@@ -104,8 +108,8 @@
         "en": "A bug closes the game on PS5 and returns to the menu"
       },
       "text": {
-        "es": "Según DualShockers, un bug cierra GTA VI en PS5 durante las partidas. Ni Sony ni Rockstar han dado causa ni arreglo. Notebookcheck cuenta que el parche 01.002.002 no arregla el error CE-108255-1, y Gizmodo (25 de noviembre) que la PS5 sigue cerrándose en algunos casos. Consejo: guarda a mano y mantén la consola actualizada.",
-        "en": "According to DualShockers, a bug closes GTA VI on PS5 mid-session. Neither Sony nor Rockstar has given a cause or fix. Notebookcheck says patch 01.002.002 does not fix error CE-108255-1, and Gizmodo (November 25) that PS5 is still crashing in some cases. Tip: save manually and keep your console updated."
+        "es": "Según DualShockers, un bug cierra GTA VI en PS5 durante las partidas. Ni Sony ni Rockstar han dado causa ni arreglo. Notebookcheck cuenta que el parche 01.002.002 no arregla el error CE-108255-1, y Gizmodo (25 de noviembre) que la PS5 sigue cerrándose en algunos casos. Consejo: guarda a mano y mantén la consola actualizada. PC Games Hardware (26 nov) recoge reportes de errores y de posibles daños en consolas, sin vínculo causal confirmado.",
+        "en": "According to DualShockers, a bug closes GTA VI on PS5 mid-session. Neither Sony nor Rockstar has given a cause or fix. Notebookcheck says patch 01.002.002 does not fix error CE-108255-1, and Gizmodo (November 25) that PS5 is still crashing in some cases. Tip: save manually and keep your console updated. PC Games Hardware (Nov 26) reports errors and possible console damage, with no confirmed causal link."
       },
       "sources": [
         {
@@ -119,6 +123,10 @@
         {
           "name": "Gizmodo",
           "url": "https://gizmodo.com/gta-vi-crashing-ps5-2000845327"
+        },
+        {
+          "name": "PC Games Hardware",
+          "url": "https://www.pcgameshardware.de/GTA-6-Spiel-55239/News/Probleme-PS5-Abstuerze-Fehlermeldungen-Hardware-Konsolen-Schaden-1561172/"
         }
       ]
     },
