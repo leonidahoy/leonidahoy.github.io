@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "items": [
+    {
+      "id": "cancion-run-away-with-me",
+      "date": "2026-11-26",
+      "cat": "curiosity",
+      "title": {
+        "es": "Una canción de hace diez años vuelve a las listas gracias a la radio del juego",
+        "en": "A ten-year-old song returns to the charts thanks to the game's radio"
+      },
+      "text": {
+        "es": "Según Queerty, «Run Away With Me», de Carly Rae Jepsen, y todo su disco «Emotion» están volviendo a las listas porque los jugadores oyen la canción en el juego y los fans la impulsan. Muestra el efecto de la banda sonora de GTA VI en la música.",
+        "en": "According to Queerty, Carly Rae Jepsen's \"Run Away With Me\" and her whole \"Emotion\" album are climbing the charts again because players hear the song in the game and fans are pushing it. It shows the effect of GTA VI's soundtrack on music."
+      },
+      "sources": [
+        {
+          "name": "Queerty",
+          "url": "https://www.queerty.com/this-decade-old-carly-rae-jepsen-song-is-going-viral-thanks-to-gta-6-but-lets-not-forget-who-loved-it-first-%F0%9F%98%8F-20261125/"
+        }
+      ]
+    },
     {
       "id": "payaso-it",
       "date": "2026-11-25",

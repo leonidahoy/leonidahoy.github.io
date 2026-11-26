@@ -1,0 +1,108 @@
+{
+  "date": "2026-11-26",
+  "title": "El autor de la filtración de 2022, condenado a siete años y libre el mismo día, según TweakTown",
+  "summary": "TweakTown cuenta que el responsable de la filtración de 2022 fue condenado a siete años y quedó libre bajo licencia ese día. Además, una canción de hace diez años vuelve a las listas por GTA VI.",
+  "lead": "El caso de la filtración de 2022 llega a su desenlace judicial. Y en la parte más ligera, la radio del juego está devolviendo una canción de hace una década a las listas.",
+  "stories": [
+    {
+      "tag": "Estudio",
+      "title": "El autor de la filtración de 2022, condenado a siete años y libre el mismo día, según TweakTown",
+      "change": "Según TweakTown, el hacker del grupo Lapsus$ responsable de la filtración de 2022 ha sido condenado a siete años por el ataque a Rockstar y quedó en libertad bajo licencia ese mismo día. Se había declarado culpable de los seis cargos el 16 de noviembre. Rockstar no ha comentado la sentencia.",
+      "plain": "Se ha dictado la condena por la filtración de 2022, pero el condenado ya no está en prisión.",
+      "sources": [
+        {
+          "name": "TweakTown",
+          "url": "https://www.tweaktown.com/news/114888/gta-6-hacker-sentenced-to-seven-years-walks-free-the-same-day-after-rockstar-games-leak/index.html"
+        }
+      ],
+      "detail": "Es el dato que faltaba tras la declaración de culpabilidad del 16 de noviembre y la fecha de sentencia que dimos el 18. Es lo que cuenta un solo medio, así que conviene esperar a más cobertura. No nombramos a la persona. Nada que ver con la build de Xbox que circula, de otro grupo.",
+      "why": "Cierra el capítulo judicial de la filtración más grave de la historia del juego."
+    },
+    {
+      "tag": "Música",
+      "title": "Una canción de Carly Rae Jepsen de hace diez años vuelve a las listas por GTA VI",
+      "change": "Según Queerty, «Run Away With Me», de Carly Rae Jepsen, y todo su disco «Emotion» están volviendo a las listas porque los jugadores la oyen en el juego y los fans la impulsan.",
+      "plain": "Una canción de hace una década se ha hecho viral gracias a la radio de GTA VI.",
+      "sources": [
+        {
+          "name": "Queerty",
+          "url": "https://www.queerty.com/this-decade-old-carly-rae-jepsen-song-is-going-viral-thanks-to-gta-6-but-lets-not-forget-who-loved-it-first-%F0%9F%98%8F-20261125/"
+        }
+      ],
+      "detail": "No enlazamos música ni la reproducimos. Es una noticia de cultura popular que muestra el alcance del juego más allá de los videojuegos. Los resultados no dan cifras de ventas ni de streams para esta canción.",
+      "why": "Muestra cómo la banda sonora del juego mueve las listas de música."
+    }
+  ],
+  "biggest": 0,
+  "more": [],
+  "rumors": [],
+  "posts": [
+    "El autor de la filtración de 2022 de GTA VI ha sido condenado a siete años y habría salido en libertad el mismo día, según TweakTown. Rockstar no ha comentado la sentencia. ⚖️",
+    "Una canción de Carly Rae Jepsen de hace diez años vuelve a las listas porque suena en GTA VI, según Queerty. La radio del juego sigue dando juego. 🎵",
+    "Dato útil: Rockstar sigue sin dar fecha para PC (un rumor habla del primer trimestre de 2027) ni para el modo online (posible finales de 2027, según Bloomberg vía Vice). 📅"
+  ],
+  "context": [
+    {
+      "title": "El autor de la filtración de 2022 se declara culpable",
+      "text": "Forbes lo recogió el 16 de noviembre; hoy hay noticias sobre su sentencia.",
+      "date": "2026-11-16",
+      "sources": [
+        {
+          "name": "Forbes",
+          "url": "https://forbes.com/sites/paultassi/2026/11/16/caught-gta-6-leaker-pleads-guilty-to-extorting-rockstar-games"
+        }
+      ]
+    },
+    {
+      "title": "Take-Two hace retirar de GitHub el proyecto de port de PC Leonida y sus copias",
+      "text": "PC Games Hardware cuenta que el aviso DMCA afectó a más de 3.000 repositorios; no hay PC oficial.",
+      "date": "2026-11-25",
+      "sources": [
+        {
+          "name": "PC Games Hardware",
+          "url": "https://www.pcgameshardware.de/GTA-6-Spiel-55239/News/PC-Port-Prolog-spielbar-ZETTROX-Leonida-DMCA-1561000/"
+        }
+      ]
+    }
+  ],
+  "en": {
+    "title": "The 2022 leak's author sentenced to seven years and free the same day, per TweakTown",
+    "summary": "TweakTown reports the person behind the 2022 leak was sentenced to seven years and released on licence that same day. Also, a ten-year-old song is back on the charts thanks to GTA VI.",
+    "lead": "The 2022 leak case reaches its court outcome. And on the lighter side, the game's radio is bringing a decade-old song back to the charts.",
+    "stories": [
+      {
+        "tag": "Studio",
+        "title": "The 2022 leak's author sentenced to seven years and free the same day, per TweakTown",
+        "change": "According to TweakTown, the Lapsus$ hacker behind the 2022 leak has been sentenced to seven years for the attack on Rockstar and was released on licence that same day. They had pleaded guilty to all six charges on November 16. Rockstar hasn't commented on the sentence.",
+        "plain": "The sentence for the 2022 leak has been handed down, but the convicted person is no longer in prison.",
+        "detail": "It's the piece that was missing after the November 16 guilty plea and the sentencing date we gave on the 18th. It's what a single outlet reports, so it's best to wait for more coverage. We don't name the person. It has nothing to do with the Xbox build circulating from another group.",
+        "why": "It closes the legal chapter of the most serious leak in the game's history."
+      },
+      {
+        "tag": "Music",
+        "title": "A ten-year-old Carly Rae Jepsen song returns to the charts thanks to GTA VI",
+        "change": "According to Queerty, Carly Rae Jepsen's \"Run Away With Me\" and her whole \"Emotion\" album are climbing the charts again because players hear it in the game and fans are pushing it.",
+        "plain": "A decade-old song has gone viral thanks to GTA VI's radio.",
+        "detail": "We don't link or play the music. It's a pop-culture story showing the game's reach beyond video games. The results give no sales or streaming figures for this song.",
+        "why": "It shows how the game's soundtrack moves the music charts."
+      }
+    ],
+    "more": [],
+    "rumors": [],
+    "posts": [
+      "The author of the 2022 GTA VI leak has been sentenced to seven years and reportedly walked free the same day, per TweakTown. Rockstar hasn't commented on the sentence. ⚖️",
+      "A ten-year-old Carly Rae Jepsen song is back on the charts because it plays in GTA VI, per Queerty. The game's radio keeps giving. 🎵",
+      "Useful fact: Rockstar still gives no date for PC (a rumor says Q1 2027) or the online mode (possibly late 2027, per Bloomberg via Vice). 📅"
+    ],
+    "context": [
+      {
+        "title": "The 2022 leak's author pleads guilty",
+        "text": "Forbes reported it on November 16; today there's news on the sentence."
+      },
+      {
+        "title": "Take-Two has GitHub remove the unofficial PC port project Leonida and its copies",
+        "text": "PC Games Hardware says the DMCA notice affected more than 3,000 repositories; no official PC version."
+      }
+    ]
+  }
+}
