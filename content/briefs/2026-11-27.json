@@ -38,7 +38,22 @@
     }
   ],
   "biggest": 0,
-  "more": [],
+  "more": [
+    {
+      "tag": "Estudio",
+      "title": "Rockstar responde al voto sindical: refleja el apoyo a una relación directa con la dirección",
+      "change": "Según Kotaku, Jennifer Kolbe, responsable de publishing de Rockstar, dijo que el 75 % de votos en contra del reconocimiento del sindicato IWGB refleja el apoyo de la plantilla a mantener una relación directa con la dirección.",
+      "plain": "Rockstar ya ha comentado el resultado de la votación, y lo interpreta a favor de su modelo actual.",
+      "sources": [
+        {
+          "name": "Kotaku",
+          "url": "https://kotaku.com/rockstar-games-union-vote-fails-as-75-percent-of-devs-vote-no-2001000621"
+        }
+      ],
+      "detail": "Es una declaración de la empresa y no de la plantilla, y los resultados no recogen la respuesta del sindicato. Los despidos de hace un año, que plantilla y sindicato consideraron una represalia, siguen pendientes de sentencia. Ayer contamos el resultado de la votación.",
+      "why": "Completa lo que contamos ayer: ya hay una primera reacción oficial de Rockstar."
+    }
+  ],
   "rumors": [],
   "posts": [
     "Ojo con el «GTA 6 en PC»: Windows Central explica que los intentos no oficiales son ilegales, pueden traer malware y Take-Two los está cerrando. No hay versión oficial de PC. 🛡️",
@@ -91,7 +106,16 @@
         "why": "It keeps you from sharing a misleading clip about a supposed game secret."
       }
     ],
-    "more": [],
+    "more": [
+      {
+        "tag": "Studio",
+        "title": "Rockstar responds to the union vote: it reflects support for a direct relationship with management",
+        "change": "According to Kotaku, Jennifer Kolbe, Rockstar's head of publishing, said the 75% vote against recognizing the IWGB union reflects staff support for keeping a direct relationship with management.",
+        "plain": "Rockstar has now commented on the vote result, and reads it as backing its current model.",
+        "detail": "It's a company statement, not staff's, and the results don't include the union's response. Last year's dismissals, which staff and the union called retaliation, are still awaiting a ruling. Yesterday we covered the vote result.",
+        "why": "It completes what we reported yesterday: there's now a first official reaction from Rockstar."
+      }
+    ],
     "rumors": [],
     "posts": [
       "Watch out for \"GTA 6 on PC\": Windows Central explains unofficial attempts are illegal, can bring malware and Take-Two is shutting them down. There's no official PC version. 🛡️",
