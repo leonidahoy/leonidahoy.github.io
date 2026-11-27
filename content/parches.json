@@ -1,11 +1,39 @@
 {
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "status": {
     "level": "watch",
     "es": "Ya hay una primera actualización con notas oficiales (01.002.002, 23 de noviembre) que corrige varios cierres y el autoguardado, pero no el error CE-108255-1 que cierra el juego en algunas PS5, según Notebookcheck.",
     "en": "There's a first update with official notes (01.002.002, November 23) that fixes several crashes and autosave, but not error CE-108255-1, which closes the game on some PS5s, according to Notebookcheck."
   },
   "entries": [
+    {
+      "id": "clima-persistente",
+      "date": "2026-11-27",
+      "type": "issue",
+      "state": "open",
+      "platforms": [
+        "ps5",
+        "xbox"
+      ],
+      "title": {
+        "es": "Algunos jugadores siguen viendo el clima congelado tras el parche",
+        "en": "Some players still see stuck weather after the patch"
+      },
+      "text": {
+        "es": "El parche 01.002.002 corrige, según sus notas, el clima que se quedaba fijo, pero Yahoo Tech y GamesRadar cuentan que algunos jugadores siguen con el mismo problema. Rockstar no ha dicho cuándo llegará el siguiente parche. Los arreglos improvisados de la comunidad no son oficiales y no los recomendamos.",
+        "en": "Patch 01.002.002 fixes, per its notes, weather getting stuck, but Yahoo Tech and GamesRadar report some players still have the same problem. Rockstar hasn't said when the next patch will arrive. Community workarounds are not official and we don't recommend them."
+      },
+      "sources": [
+        {
+          "name": "Yahoo Tech",
+          "url": "https://tech.yahoo.com/gaming/articles/gta-6-players-fix-weather-173127608.html"
+        },
+        {
+          "name": "GamesRadar",
+          "url": "https://www.gamesradar.com/games/grand-theft-auto/gta-6-players-fix-the-weather-system-themselves-after-rockstars-latest-patch-left-them-hanging-its-super-easy-and-takes-like-two-minutes/"
+        }
+      ]
+    },
     {
       "id": "bloqueo-capitulo-3",
       "date": "2026-11-24",
