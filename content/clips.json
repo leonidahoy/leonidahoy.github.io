@@ -1,6 +1,32 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-28",
   "items": [
+    {
+      "id": "clips-realistas",
+      "url": "https://www.youtube.com/shorts/4PtAVmizs-U",
+      "lang": "en",
+      "date": "2026-11-28",
+      "cat": "graphics",
+      "title": "GTA 6 Clips - Everyone's WRONG About Why They Look Real",
+      "by": null,
+      "note": {
+        "es": "Un short que analiza por qué los clips de GTA 6 parecen reales y qué se les pasa por alto a muchos.",
+        "en": "A short analyzing why GTA 6 clips look real and what many people miss."
+      }
+    },
+    {
+      "id": "stream-pantalla-tiktok",
+      "url": "https://www.youtube.com/shorts/PKjESVthvy8",
+      "lang": "es",
+      "date": "2026-11-28",
+      "cat": "humor",
+      "title": "GTA 6 iniciando stream y la pantalla de TikTok volteada",
+      "by": null,
+      "note": {
+        "es": "Un short de humor sobre empezar un directo de GTA 6 con la pantalla del móvil al revés.",
+        "en": "A comedy short about starting a GTA 6 stream with the phone screen flipped."
+      }
+    },
     {
       "id": "abuelas-juegan",
       "url": "https://www.youtube.com/shorts/fLVIi1qS18o",

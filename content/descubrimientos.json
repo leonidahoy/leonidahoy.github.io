@@ -1,6 +1,44 @@
 {
-  "updated": "2026-11-26",
+  "updated": "2026-11-28",
   "items": [
+    {
+      "id": "alinea-53-millones",
+      "date": "2026-11-28",
+      "cat": "record",
+      "title": {
+        "es": "53 millones de copias y 4.700 millones de dólares, según una estimación",
+        "en": "53 million copies and $4.7 billion, per an estimate"
+      },
+      "text": {
+        "es": "Según Forbes, la analista Alinea estima que GTA VI ha vendido 53 millones de copias y ha ingresado 4.700 millones de dólares ocho días tras el lanzamiento. Rockstar solo ha confirmado 3.790 millones de dólares del primer día, incluidas reservas.",
+        "en": "According to Forbes, analyst Alinea estimates GTA VI has sold 53 million copies and earned $4.7 billion eight days after launch. Rockstar has only confirmed $3.79 billion for day one, preorders included."
+      },
+      "sources": [
+        {
+          "name": "Forbes",
+          "url": "https://forbes.com/sites/paultassi/2026/11/27/gta-6-is-already-one-of-the-best-selling-games-ever-says-report"
+        }
+      ]
+    },
+    {
+      "id": "teoria-trafico",
+      "date": "2026-11-28",
+      "cat": "tech",
+      "title": {
+        "es": "Un clip reaviva la teoría de que el tráfico frena a los jugadores que van rápido",
+        "en": "A clip revives the theory that traffic slows fast players"
+      },
+      "text": {
+        "es": "Según Notebookcheck, un clip viral con un tráiler cruzándose en una autopista de GTA VI ha reavivado una vieja teoría de la saga: que el tráfico se coloca para frenar a quien conduce muy rápido. Rockstar no lo ha confirmado y un solo clip no lo demuestra.",
+        "en": "According to Notebookcheck, a viral clip of a trailer swerving across a GTA VI highway has revived an old series theory: that traffic is placed to slow anyone driving very fast. Rockstar hasn't confirmed it and one clip doesn't prove it."
+      },
+      "sources": [
+        {
+          "name": "Notebookcheck",
+          "url": "https://www.notebookcheck.net/GTA-6-Viral-video-reignites-old-Rockstar-theory.1461486.0.html"
+        }
+      ]
+    },
     {
       "id": "cancion-run-away-with-me",
       "date": "2026-11-26",
