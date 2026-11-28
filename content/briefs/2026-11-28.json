@@ -48,6 +48,34 @@
       ],
       "detail": "Es una noticia de cultura popular y los resultados no dan más detalles de las escenas. No enlazamos ni reproducimos el vídeo. Otros medios internacionales también se han hecho eco, según el resumen de búsqueda.",
       "why": "Muestra el alcance del juego más allá de los videojuegos."
+    },
+    {
+      "tag": "Estudio",
+      "title": "Un responsable de Rockstar admite que hasta el equipo dudaba de que el lanzamiento llegara",
+      "change": "Según VGTimes, un responsable de Rockstar ha reconocido que a muchos en el estudio les parecía que el día del lanzamiento nunca iba a llegar. Es una declaración sobre el ánimo del equipo durante los años de desarrollo y los dos retrasos.",
+      "plain": "Ni siquiera quienes hacían el juego estaban seguros de ver su estreno.",
+      "sources": [
+        {
+          "name": "VGTimes",
+          "url": "https://vgtimes.com/gaming-news/176063-gta-6-developers-thought-launch-day-might-never-come-says-rockstar-lead.html"
+        }
+      ],
+      "detail": "Los resultados no precisan quién habló ni cuándo. No incluimos citas literales. Es una declaración personal y no un dato de la empresa. Encaja con los dos retrasos que sufrió el juego en 2025.",
+      "why": "Da contexto humano a un desarrollo de más de una década."
+    },
+    {
+      "tag": "Aviso",
+      "title": "Jugadores de PS5 y PS5 Pro dicen que el juego se ve peor tras el parche",
+      "change": "Según Notebookcheck, algunos jugadores de PS5 y PS5 Pro se quejan de peor calidad gráfica tras la actualización 01.002.002. Las notas del parche no mencionan cambios gráficos y Rockstar no ha comentado.",
+      "plain": "Si te parece que el juego se ve más borroso, no eres el único. Rockstar no ha confirmado ningún cambio.",
+      "sources": [
+        {
+          "name": "Notebookcheck",
+          "url": "https://www.notebookcheck.com/GTA-6-Update-PS5-und-PS5-Pro-Zocker-beschweren-sich-ueber-schlechtere-Grafik.1461937.0.html"
+        }
+      ],
+      "detail": "La fuente está en alemán y recoge impresiones de jugadores, sin mediciones. Puede deberse a ajustes del sistema o de la tele. Lo seguimos en la sección de parches y problemas, donde también están los cierres y el clima congelado.",
+      "why": "Te ayuda a distinguir un cambio real de una impresión subjetiva."
     }
   ],
   "rumors": [],
@@ -110,6 +138,22 @@
         "plain": "The game is already inspiring fan videos around the world.",
         "detail": "It's a pop-culture story and the results give no more details on the scenes. We don't link or play the video. Other international outlets have also picked it up, per the search summary.",
         "why": "It shows the game's reach beyond video games."
+      },
+      {
+        "tag": "Studio",
+        "title": "A Rockstar lead admits even the team doubted the launch would come",
+        "change": "According to VGTimes, a Rockstar lead has acknowledged that many at the studio felt the launch day would never arrive. It's a statement about the team's mood during the development years and the two delays.",
+        "plain": "Even the people making the game weren't sure they'd see it launch.",
+        "detail": "The results don't specify who spoke or when. We include no direct quotes. It's a personal statement, not company data. It fits the two delays the game suffered in 2025.",
+        "why": "It gives human context to a development of more than a decade."
+      },
+      {
+        "tag": "Heads-up",
+        "title": "PS5 and PS5 Pro players say the game looks worse after the patch",
+        "change": "According to Notebookcheck, some PS5 and PS5 Pro players complain of worse graphics quality after update 01.002.002. The patch notes don't mention graphics changes and Rockstar hasn't commented.",
+        "plain": "If the game looks blurrier to you, you're not alone. Rockstar hasn't confirmed any change.",
+        "detail": "The source is in German and relays player impressions, without measurements. It can be down to system or TV settings. We're tracking it in the patches and issues section, which also has the crashes and the stuck weather.",
+        "why": "It helps you tell a real change from a subjective impression."
       }
     ],
     "rumors": [],

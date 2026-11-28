@@ -1,11 +1,35 @@
 {
-  "updated": "2026-11-27",
+  "updated": "2026-11-28",
   "status": {
     "level": "watch",
     "es": "Ya hay una primera actualización con notas oficiales (01.002.002, 23 de noviembre) que corrige varios cierres y el autoguardado, pero no el error CE-108255-1 que cierra el juego en algunas PS5, según Notebookcheck.",
     "en": "There's a first update with official notes (01.002.002, November 23) that fixes several crashes and autosave, but not error CE-108255-1, which closes the game on some PS5s, according to Notebookcheck."
   },
   "entries": [
+    {
+      "id": "graficos-peores",
+      "date": "2026-11-28",
+      "type": "issue",
+      "state": "open",
+      "platforms": [
+        "ps5",
+        "xbox"
+      ],
+      "title": {
+        "es": "Jugadores dicen que el juego se ve peor tras el parche",
+        "en": "Players say the game looks worse after the patch"
+      },
+      "text": {
+        "es": "Según Notebookcheck, algunos jugadores de PS5 y PS5 Pro se quejan de peor calidad gráfica tras la 01.002.002. Las notas del parche no mencionan cambios gráficos y Rockstar no ha comentado. Son impresiones de jugadores, sin mediciones.",
+        "en": "According to Notebookcheck, some PS5 and PS5 Pro players complain of worse graphics quality after 01.002.002. The patch notes don't mention graphics changes and Rockstar hasn't commented. These are player impressions, without measurements."
+      },
+      "sources": [
+        {
+          "name": "Notebookcheck",
+          "url": "https://www.notebookcheck.com/GTA-6-Update-PS5-und-PS5-Pro-Zocker-beschweren-sich-ueber-schlechtere-Grafik.1461937.0.html"
+        }
+      ]
+    },
     {
       "id": "clima-persistente",
       "date": "2026-11-27",
@@ -159,6 +183,10 @@
         {
           "name": "PC Games Hardware",
           "url": "https://www.pcgameshardware.de/GTA-6-Spiel-55239/News/Probleme-PS5-Abstuerze-Fehlermeldungen-Hardware-Konsolen-Schaden-1561172/"
+        },
+        {
+          "name": "VGTimes",
+          "url": "https://vgtimes.com/gaming-news/176033-gta-6-crashes-and-console-shutdowns-reported-on-ps5-and-xbox.html"
         }
       ]
     },
